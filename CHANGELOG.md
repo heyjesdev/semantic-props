@@ -2,6 +2,16 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.2.0] - YYYY-MM-DD
+
+### Added
+
+- Added relative colors origin for every weighted color.
+
+### Removed
+
+- Removed legacy color values in favor of relative colors.
+
 ## [2.1.1] - 2026-08-12
 
 ### Changed
@@ -178,3 +188,4 @@ A **breaking change** release that greatly improves browser compatibility, file 
 [2.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0
 [2.1.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.1.0
 [2.1.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.1.1
+[2.2.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.2.0

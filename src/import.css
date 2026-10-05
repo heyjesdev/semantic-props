@@ -85,6 +85,22 @@
 	--white: white;
 	--black: black;
 
+	--accent: var(--blue);
+	--blue: oklch(0.6 0.15 240);
+	--brown: oklch(0.6 0.05 50);
+	--coral: oklch(0.7 0.2 40);
+	--cyan: oklch(0.7 0.15 180);
+	--gray: oklch(0.5 0.01 260);
+	--green: oklch(0.6 0.2 150);
+	--indigo: oklch(0.4 0.2 270);
+	--lime: oklch(0.7 0.15 120);
+	--magenta: oklch(0.6 0.2 330);
+	--orange: oklch(0.6 0.15 50);
+	--pink: oklch(0.8 0.1 10);
+	--red: oklch(0.5 0.2 30);
+	--violet: oklch(0.4 0.15 290);
+	--yellow: oklch(0.8 0.15 90);
+
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate Percentage from Weight: */
 		$percentage: calc((900 - $weight) / (900 - 100));
@@ -95,21 +111,21 @@
 		$lch: $l $c h;
 
 		/* Declare Color Weights: */
-		--accent-$(weight): var(--blue-$(weight));
-		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $lch);
-		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $lch);
-		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $lch);
-		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $lch);
-		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $lch);
-		--green-$(weight): oklch(from oklch(0.6 0.2 150) $lch);
-		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $lch);
-		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $lch);
-		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $lch);
-		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $lch);
-		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $lch);
-		--red-$(weight): oklch(from oklch(0.5 0.2 30) $lch);
-		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $lch);
-		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $lch);
+		--accent-$(weight): oklch(from var(--accent) $lch);
+		--blue-$(weight): oklch(from var(--blue) $lch);
+		--brown-$(weight): oklch(from var(--brown) $lch);
+		--coral-$(weight): oklch(from var(--coral) $lch);
+		--cyan-$(weight): oklch(from var(--cyan) $lch);
+		--gray-$(weight): oklch(from var(--gray) $lch);
+		--green-$(weight): oklch(from var(--green) $lch);
+		--indigo-$(weight): oklch(from var(--indigo) $lch);
+		--lime-$(weight): oklch(from var(--lime) $lch);
+		--magenta-$(weight): oklch(from var(--magenta) $lch);
+		--orange-$(weight): oklch(from var(--orange) $lch);
+		--pink-$(weight): oklch(from var(--pink) $lch);
+		--red-$(weight): oklch(from var(--red) $lch);
+		--violet-$(weight): oklch(from var(--violet) $lch);
+		--yellow-$(weight): oklch(from var(--yellow) $lch);
 	}
 
 	--background-color: var(--white);
