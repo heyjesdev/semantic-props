@@ -111,9 +111,11 @@ semantic-props {
 	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
 
 	/* Font Weight: */
+	--thin-weight: 100;
 	--light-weight: 300;
 	--regular-weight: 400;
 	--bold-weight: 700;
+	--heavy-weight: 900;
 
 	/* Line Height: */
 	--short-line: 1.2;
