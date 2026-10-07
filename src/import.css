@@ -82,12 +82,10 @@
 	--margin-size: 5%;
 
 	/* --- Colors --- */
-	--primary-color: var(--white);
-	--secondary-color: var(--black);
-	--accent-color: oklch(0.6 0.15 240);
 
 	--white: white;
 	--black: black;
+	--gray: oklch(0.5 0.01 260);
 
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate Percentage from Weight: */
@@ -98,10 +96,25 @@
 		$c: calc(c * sin(pi * $l));
 		$lch: $l $c h;
 
-		/* Declare Color Weights: */
-		--primary-$(weight): oklch(from var(--primary-color) $lch);
-		--secondary-$(weight): oklch(from var(--secondary-color) $lch);
-		--accent-$(weight): oklch(from var(--accent-color) $lch);
+		/* Declare Grays: */
+		--gray-$(weight): oklch(from var(--gray) $lch);
+	}
+
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
+
+	--low-contrast-color: var(--gray-500);
+	--medium-contrast-color: var(--gray-700);
+	--high-contrast-color: var(--black);
+
+	@media (prefers-color-scheme: dark) {
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
+
+		--medium-contrast-color: var(--gray-300);
+		--high-contrast-color: var(--white);
 	}
 
 	/* --- Typography --- */
