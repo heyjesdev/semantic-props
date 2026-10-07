@@ -1,32 +1,18 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* --- Queries --- */
+semantic-props {
+	display: contents;
 
-@property --theme {
-	syntax: "<custom-ident>";
-	inherits: true;
-	initial-value: none;
-}
+	/* --- Queries --- */
 
-@property --small-breakpoint {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
+	/* Theme: */
+	--theme: none;
 
-@property --medium-breakpoint {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
+	/* Breakpoint: */
+	--small-breakpoint: false;
+	--medium-breakpoint: false;
+	--large-breakpoint: false;
 
-@property --large-breakpoint {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
-
-:root {
 	@media (width >= 20rem) /* 320px */ {
 		--small-breakpoint: true;
 	}
@@ -108,7 +94,7 @@
 	--medium-contrast-color: var(--gray-700);
 	--high-contrast-color: var(--black);
 
-	@media (prefers-color-scheme: dark) {
+	@container style(--theme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
 		--foreground-color: var(--gray-800);
