@@ -1,42 +1,26 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* --- Queries --- */
-
-@property --theme {
-	syntax: "<custom-ident>";
-	inherits: true;
-	initial-value: none;
-}
-
-@property --small-viewport {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
-
-@property --medium-viewport {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
-
-@property --large-viewport {
-	syntax: "true | false";
-	inherits: true;
-	initial-value: false;
-}
-
 :root {
+	/* --- Queries --- */
+
+	/* Theme: */
+	--theme: none;
+
+	/* Breakpoint: */
+	--small-breakpoint: false;
+	--medium-breakpoint: false;
+	--large-breakpoint: false;
+
 	@media (width >= 20rem) /* 320px */ {
-		--small-viewport: true;
+		--small-breakpoint: true;
 	}
 
 	@media (width >= 48rem) /* 768px */ {
-		--medium-viewport: true;
+		--medium-breakpoint: true;
 	}
 
 	@media (width >= 80rem) /* 1280px */ {
-		--large-viewport: true;
+		--large-breakpoint: true;
 	}
 
 	/* --- Sizes --- */
@@ -84,8 +68,6 @@
 	/* --- Colors --- */
 	--white: white;
 	--black: black;
-
-	--accent: var(--blue);
 	--blue: oklch(0.6 0.15 240);
 	--brown: oklch(0.6 0.05 50);
 	--coral: oklch(0.7 0.2 40);
@@ -101,6 +83,10 @@
 	--violet: oklch(0.4 0.15 290);
 	--yellow: oklch(0.8 0.15 90);
 
+	--primary-color: var(--white);
+	--secondary-color: var(--black);
+	--accent-color: var(--blue);
+
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate Percentage from Weight: */
 		$percentage: calc((900 - $weight) / (900 - 100));
@@ -111,37 +97,26 @@
 		$lch: $l $c h;
 
 		/* Declare Color Weights: */
-		--accent-$(weight): oklch(from var(--accent) $lch);
-		--blue-$(weight): oklch(from var(--blue) $lch);
-		--brown-$(weight): oklch(from var(--brown) $lch);
-		--coral-$(weight): oklch(from var(--coral) $lch);
-		--cyan-$(weight): oklch(from var(--cyan) $lch);
-		--gray-$(weight): oklch(from var(--gray) $lch);
-		--green-$(weight): oklch(from var(--green) $lch);
-		--indigo-$(weight): oklch(from var(--indigo) $lch);
-		--lime-$(weight): oklch(from var(--lime) $lch);
-		--magenta-$(weight): oklch(from var(--magenta) $lch);
-		--orange-$(weight): oklch(from var(--orange) $lch);
-		--pink-$(weight): oklch(from var(--pink) $lch);
-		--red-$(weight): oklch(from var(--red) $lch);
-		--violet-$(weight): oklch(from var(--violet) $lch);
-		--yellow-$(weight): oklch(from var(--yellow) $lch);
+		--primary-$(weight): oklch(from var(--primary-color) $lch);
+		--secondary-$(weight): oklch(from var(--secondary-color) $lch);
+		--accent-$(weight): oklch(from var(--accent-color) $lch);
 	}
 
 	--background-color: var(--white);
-	--middleground-color: var(--gray-100);
-	--foreground-color: var(--gray-200);
+	--middleground-color: var(--primary-100);
+	--foreground-color: var(--primary-200);
 
-	--low-contrast-color: var(--gray-500);
-	--medium-contrast-color: var(--gray-700);
+	--low-contrast-color: var(--secondary-600);
+	--medium-contrast-color: var(--secondary-800);
 	--high-contrast-color: var(--black);
 
 	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
-		--middleground-color: var(--gray-900);
-		--foreground-color: var(--gray-800);
+		--middleground-color: var(--primary-900);
+		--foreground-color: var(--primary-800);
 
-		--medium-contrast-color: var(--gray-300);
+		--low-contrast-color: var(--secondary-400);
+		--medium-contrast-color: var(--secondary-200);
 		--high-contrast-color: var(--white);
 	}
 
@@ -160,20 +135,10 @@
 	--bold-weight: 700;
 	--heavy-weight: 900;
 
-	/* Letter Spacing: */
-	--tight-letter: -0.05em;
-	--normal-letter: normal;
-	--wide-letter: 0.1em;
-
 	/* Line Height: */
 	--short-line: 1.2;
 	--normal-line: 1.6;
 	--tall-line: 2;
-
-	/* Word Spacing: */
-	--tight-word: -0.1em;
-	--normal-word: normal;
-	--wide-word: 0.2em;
 
 	/* --- Filters --- */
 
@@ -247,14 +212,6 @@
 	--safe-right: env(safe-area-inset-right);
 	--safe-bottom: env(safe-area-inset-bottom);
 	--safe-left: env(safe-area-inset-left);
-
-	--safe: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
-	--safe-x: 0 var(--safe-right) 0 var(--safe-left);
-	--safe-y: var(--safe-top) 0 var(--safe-bottom) 0;
-
-	--safe-header: var(--safe-top) var(--safe-right) 0 var(--safe-left);
-	--safe-body: var(--safe-x);
-	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
 	/* --- Animations --- */
 
