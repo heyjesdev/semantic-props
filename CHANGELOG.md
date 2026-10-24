@@ -10,6 +10,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Changed
 
+- Changed selector from `:root` to `semantic-props` custom element.
 - Changed `-viewport` query props to `-breakpoint` naming.
 - Changed `--accent-family` to `--brand-family`.
 
