@@ -32,7 +32,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "postcss src/import.css -o dist/import.min.css",
-		"watch:build": "onchange 'src/**/*' -- npm run build"
+		"build:watch": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
 		"@csstools/postcss-trigonometric-functions": "^4.0.9",
