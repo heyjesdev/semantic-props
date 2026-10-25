@@ -13,15 +13,15 @@ semantic-props {
 	--medium-breakpoint: false;
 	--large-breakpoint: false;
 
-	@media (width >= 20rem) /* 320px */ {
+	@container (width >= 20rem) /* 320px */ {
 		--small-breakpoint: true;
 	}
 
-	@media (width >= 48rem) /* 768px */ {
+	@container (width >= 48rem) /* 768px */ {
 		--medium-breakpoint: true;
 	}
 
-	@media (width >= 80rem) /* 1280px */ {
+	@container (width >= 80rem) /* 1280px */ {
 		--large-breakpoint: true;
 	}
 
