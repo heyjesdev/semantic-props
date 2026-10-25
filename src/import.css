@@ -102,7 +102,7 @@ semantic-props {
 	--medium-contrast-color: var(--secondary-800);
 	--high-contrast-color: var(--black);
 
-	@media (prefers-color-scheme: dark) {
+	@container style(--theme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--primary-900);
 		--foreground-color: var(--primary-800);
