@@ -3,14 +3,24 @@
 :root {
 	/* --- Colors --- */
 
-	/* Origin: */
-	--primary-color: var(--white);
-	--secondary-color: oklch(0.5 0.02 260);
-	--accent-color: oklch(0.5 0.2 260);
-	--success-color: oklch(0.6 0.15 160);
-	--warning-color: oklch(0.8 0.15 80);
-	--danger-color: oklch(0.6 0.2 30);
-	--info-color: oklch(0.7 0.15 200);
+	/* Theme: */
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
+
+	--low-contrast-color: var(--gray-600);
+	--medium-contrast-color: var(--gray-800);
+	--high-contrast-color: var(--black);
+
+	@media (prefers-color-scheme: dark) {
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
+
+		--low-contrast-color: var(--gray-400);
+		--medium-contrast-color: var(--gray-200);
+		--high-contrast-color: var(--white);
+	}
 
 	/* Weight: */
 	--white: white;
@@ -28,22 +38,20 @@
 		$lch: $l $c h;
 
 		/* Declare Colors: */
-		--primary-#{$weight}: oklch(from white #{$lch});
-		--secondary-#{$weight}: oklch(from oklch(0.5 0.02 260) #{$lch});
-		--accent-#{$weight}: oklch(from oklch(0.5 0.2 260) #{$lch});
-		--success-#{$weight}: oklch(from oklch(0.6 0.15 160) #{$lch});
-		--warning-#{$weight}: oklch(from oklch(0.8 0.15 80) #{$lch});
-		--danger-#{$weight}: oklch(from oklch(0.6 0.2 30) #{$lch});
-		--info-#{$weight}: oklch(from oklch(0.7 0.15 200) #{$lch});
-		@supports (color: oklch(from gray l c h)) {
-			--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
-			--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
-			--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
-			--success-#{$weight}: oklch(from var(--success-color) #{$lch});
-			--warning-#{$weight}: oklch(from var(--warning-color) #{$lch});
-			--danger-#{$weight}: oklch(from var(--danger-color) #{$lch});
-			--info-#{$weight}: oklch(from var(--info-color) #{$lch});
-		}
+		--blue-#{$weight}: oklch(from oklch(0.6 0.15 240) #{$lch});
+		--brown-#{$weight}: oklch(from oklch(0.6 0.05 50) #{$lch});
+		--coral-#{$weight}: oklch(from oklch(0.7 0.2 40) #{$lch});
+		--cyan-#{$weight}: oklch(from oklch(0.7 0.15 180) #{$lch});
+		--gray-#{$weight}: oklch(from oklch(0.5 0.01 260) #{$lch});
+		--green-#{$weight}: oklch(from oklch(0.6 0.2 150) #{$lch});
+		--indigo-#{$weight}: oklch(from oklch(0.4 0.2 270) #{$lch});
+		--lime-#{$weight}: oklch(from oklch(0.7 0.15 120) #{$lch});
+		--magenta-#{$weight}: oklch(from oklch(0.6 0.2 330) #{$lch});
+		--orange-#{$weight}: oklch(from oklch(0.6 0.15 50) #{$lch});
+		--pink-#{$weight}: oklch(from oklch(0.8 0.1 10) #{$lch});
+		--red-#{$weight}: oklch(from oklch(0.5 0.2 30) #{$lch});
+		--violet-#{$weight}: oklch(from oklch(0.4 0.15 290) #{$lch});
+		--yellow-#{$weight}: oklch(from oklch(0.8 0.15 90) #{$lch});
 	}
 
 	/* --- Sizes --- */
