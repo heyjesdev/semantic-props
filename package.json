@@ -36,6 +36,10 @@
 		"build:watch": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
+		"@csstools/postcss-media-minmax": "^3.0.8",
+		"@csstools/postcss-oklab-function": "^5.0.15",
+		"@csstools/postcss-relative-color-syntax": "^4.0.15",
+		"@csstools/postcss-trigonometric-functions": "^5.0.9",
 		"cssnano": "^7.1.2",
 		"onchange": "^7.1.0",
 		"postcss": "^8.5.6",

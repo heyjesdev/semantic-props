@@ -70,13 +70,22 @@
 		$lch: $l $c h;
 
 		/* Declare Colors: */
-		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
-		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
-		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
-		--success-#{$weight}: oklch(from var(--success-color) #{$lch});
-		--warning-#{$weight}: oklch(from var(--warning-color) #{$lch});
-		--danger-#{$weight}: oklch(from var(--danger-color) #{$lch});
-		--info-#{$weight}: oklch(from var(--info-color) #{$lch});
+		--primary-#{$weight}: oklch(from white #{$lch});
+		--secondary-#{$weight}: oklch(from oklch(0.5 0.02 260) #{$lch});
+		--accent-#{$weight}: oklch(from oklch(0.5 0.2 260) #{$lch});
+		--success-#{$weight}: oklch(from oklch(0.6 0.15 160) #{$lch});
+		--warning-#{$weight}: oklch(from oklch(0.8 0.15 80) #{$lch});
+		--danger-#{$weight}: oklch(from oklch(0.6 0.2 30) #{$lch});
+		--info-#{$weight}: oklch(from oklch(0.7 0.15 200) #{$lch});
+		@supports (color: oklch(from gray l c h)) {
+			--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+			--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+			--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
+			--success-#{$weight}: oklch(from var(--success-color) #{$lch});
+			--warning-#{$weight}: oklch(from var(--warning-color) #{$lch});
+			--danger-#{$weight}: oklch(from var(--danger-color) #{$lch});
+			--info-#{$weight}: oklch(from var(--info-color) #{$lch});
+		}
 	}
 
 	/* --- Typography --- */
