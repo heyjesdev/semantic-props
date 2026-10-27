@@ -1,48 +1,6 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
 :root {
-	/* --- Sizes --- */
-
-	/* Absolute: */
-	--3x-small: calc(var(--2x-small) - (var(--medium) - var(--small)));
-	--2x-small: calc(var(--x-small) - (var(--medium) - var(--small)));
-	--x-small: calc(var(--small) - (var(--medium) - var(--small)));
-	--small: 0.8125rem;
-	--medium: 1rem;
-	--large: 1.25rem;
-	--x-large: calc(var(--large) + (var(--large) - var(--medium)));
-	--2x-large: calc(var(--x-large) + (var(--large) - var(--medium)));
-	--3x-large: calc(var(--2x-large) + (var(--large) - var(--medium)));
-	--4x-large: calc(var(--3x-large) + (var(--large) - var(--medium)));
-	--5x-large: calc(var(--4x-large) + (var(--large) - var(--medium)));
-	--6x-large: calc(var(--5x-large) + (var(--large) - var(--medium)));
-	--7x-large: calc(var(--6x-large) + (var(--large) - var(--medium)));
-	--8x-large: calc(var(--7x-large) + (var(--large) - var(--medium)));
-	--9x-large: calc(var(--8x-large) + (var(--large) - var(--medium)));
-
-	/* Relative: */
-	--smaller: 0.8125em;
-	--larger: 1.25em;
-
-	/* Container: */
-	--3x-small-container: 8rem; /* 128px */
-	--2x-small-container: 10rem; /* 160px */
-	--x-small-container: 15rem; /* 240px */
-	--small-container: 20rem; /* 320px */
-	--medium-container: 30rem; /* 480px */
-	--large-container: 48rem; /* 768px */
-	--x-large-container: 64rem; /* 1024px */
-	--2x-large-container: 80rem; /* 1280px */
-	--3x-large-container: 90rem; /* 1440px */
-
-	/* Radius: */
-	--small-radius: 0.5rem; /* 8px */
-	--medium-radius: 1.25rem; /* 20px */
-	--large-radius: 2rem; /* 32px */
-
-	/* Margin: */
-	--margin-size: 5vw;
-
 	/* --- Colors --- */
 
 	/* Origin: */
@@ -87,6 +45,48 @@
 			--info-#{$weight}: oklch(from var(--info-color) #{$lch});
 		}
 	}
+
+	/* --- Sizes --- */
+
+	/* Absolute: */
+	--3x-small: calc(var(--2x-small) - (var(--medium) - var(--small)));
+	--2x-small: calc(var(--x-small) - (var(--medium) - var(--small)));
+	--x-small: calc(var(--small) - (var(--medium) - var(--small)));
+	--small: 0.8125rem;
+	--medium: 1rem;
+	--large: 1.25rem;
+	--x-large: calc(var(--large) + (var(--large) - var(--medium)));
+	--2x-large: calc(var(--x-large) + (var(--large) - var(--medium)));
+	--3x-large: calc(var(--2x-large) + (var(--large) - var(--medium)));
+	--4x-large: calc(var(--3x-large) + (var(--large) - var(--medium)));
+	--5x-large: calc(var(--4x-large) + (var(--large) - var(--medium)));
+	--6x-large: calc(var(--5x-large) + (var(--large) - var(--medium)));
+	--7x-large: calc(var(--6x-large) + (var(--large) - var(--medium)));
+	--8x-large: calc(var(--7x-large) + (var(--large) - var(--medium)));
+	--9x-large: calc(var(--8x-large) + (var(--large) - var(--medium)));
+
+	/* Relative: */
+	--smaller: 0.8125em;
+	--larger: 1.25em;
+
+	/* Container: */
+	--3x-small-container: 8rem; /* 128px */
+	--2x-small-container: 10rem; /* 160px */
+	--x-small-container: 15rem; /* 240px */
+	--small-container: 20rem; /* 320px */
+	--medium-container: 30rem; /* 480px */
+	--large-container: 48rem; /* 768px */
+	--x-large-container: 64rem; /* 1024px */
+	--2x-large-container: 80rem; /* 1280px */
+	--3x-large-container: 90rem; /* 1440px */
+
+	/* Radius: */
+	--small-radius: 0.5rem; /* 8px */
+	--medium-radius: 1.25rem; /* 20px */
+	--large-radius: 2rem; /* 32px */
+
+	/* Margin: */
+	--margin-size: 5vw;
 
 	/* --- Typography --- */
 
