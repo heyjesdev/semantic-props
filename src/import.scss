@@ -78,7 +78,10 @@ semantic-props {
 	--white: white;
 	--black: black;
 
-	@for $weight from 100 to 900 by 100 {
+	@for $weight from 1 to 9 {
+		/* Calculate Weight: */
+		$weight: $weight * 100;
+
 		/* Calculate Percentage from Weight: */
 		$percentage: calc((900 - $weight) / (900 - 100));
 
@@ -88,9 +91,9 @@ semantic-props {
 		$lch: $l $c h;
 
 		/* Declare Color Weights: */
-		--primary-$(weight): oklch(from var(--primary-color) $lch);
-		--secondary-$(weight): oklch(from var(--secondary-color) $lch);
-		--accent-$(weight): oklch(from var(--accent-color) $lch);
+		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
 	}
 
 	/* Theme: */

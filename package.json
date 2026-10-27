@@ -32,16 +32,15 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.min.css",
+		"build": "sass src/import.scss | postcss -o dist/import.min.css",
 		"build:watch": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
-		"@csstools/postcss-trigonometric-functions": "^4.0.9",
 		"cssnano": "^7.1.2",
 		"onchange": "^7.1.0",
 		"postcss": "^8.5.6",
-		"postcss-advanced-variables": "^5.0.0",
 		"postcss-cli": "^11.0.1",
-		"postcss-combine-duplicated-selectors": "^11.0.0"
+		"postcss-combine-duplicated-selectors": "^11.0.0",
+		"sass": "^1.106.1"
 	}
 }
