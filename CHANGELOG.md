@@ -6,7 +6,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
+- Added `--primary-color`, `--secondary-color` and `--tertiary-color` theme colors.
 
 ### Changed
 
@@ -18,8 +18,8 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
-- Removed use of `@property`, opting scope to `:root`.
-- Removed existing colors in favor of relative colors.
+- Removed use of `@property`, opting scope to `semantic-props`.
+- Removed legacy color formats in favor of relative colors.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary aspect-ratio props.
 - Removed unnecessary safe-area props.
