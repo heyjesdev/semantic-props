@@ -78,7 +78,7 @@ semantic-props {
 	--white: white;
 	--black: black;
 
-	@for $weight from 1 to 9 {
+	@for $weight from 1 through 9 {
 		/* Calculate Weight: */
 		$weight: $weight * 100;
 
