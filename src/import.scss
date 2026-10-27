@@ -1,8 +1,6 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-semantic-props {
-	display: contents;
-
+:root {
 	/* --- Queries --- */
 
 	/* Theme: */
@@ -13,15 +11,15 @@ semantic-props {
 	--medium-breakpoint: false;
 	--large-breakpoint: false;
 
-	@container (width >= 20rem) /* 320px */ {
+	@media (width >= 20rem) /* 320px */ {
 		--small-breakpoint: true;
 	}
 
-	@container (width >= 48rem) /* 768px */ {
+	@media (width >= 48rem) /* 768px */ {
 		--medium-breakpoint: true;
 	}
 
-	@container (width >= 80rem) /* 1280px */ {
+	@media (width >= 80rem) /* 1280px */ {
 		--large-breakpoint: true;
 	}
 
@@ -131,7 +129,7 @@ semantic-props {
 	--secondary-color: var(--accent-600);
 	--tertiary-color: var(--accent-700);
 
-	@container style(--theme: dark) {
+	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
 		--foreground-color: var(--gray-800);

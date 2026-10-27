@@ -10,15 +10,13 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Changed
 
-- Changed selector from `:root` to `semantic-props` custom element.
-- Changed `-viewport` query props to use `@container` and `-breakpoint` suffix.
+- Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed `--margin-size` value from `5%` to `5cqi`.
-- Changed `(prefers-color-scheme: dark)` use to `style(--theme: dark)` queries.
 - Changed `--accent-family` to `--brand-family`.
 
 ### Removed
 
-- Removed use of `@property`, opting scope to `semantic-props`.
+- Removed use of `@property`, opting scope to `:root`.
 - Removed legacy color formats in favor of relative colors.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary aspect-ratio props.
