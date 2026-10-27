@@ -70,18 +70,14 @@ semantic-props {
 	/* --- Colors --- */
 
 	/* Palette: */
-	--primary-color: var(--white);
-	--secondary-color: var(--black);
+	--primary-color: white;
+	--secondary-color: oklch(0.2 0.01 260);
 	--accent-color: oklch(0.6 0.15 240);
 
-	/* Weight: */
-	--white: white;
-	--black: black;
+	/* Declare Weights: */
+	$weights: 100 200 300 400 500 600 700 800 900;
 
-	@for $weight from 1 through 9 {
-		/* Calculate Weight: */
-		$weight: $weight * 100;
-
+	@each $weight in $weights {
 		/* Calculate Percentage from Weight: */
 		$percentage: calc((900 - $weight) / (900 - 100));
 
@@ -97,22 +93,15 @@ semantic-props {
 	}
 
 	/* Theme: */
-	--background-color: var(--white);
-	--middleground-color: var(--primary-100);
-	--foreground-color: var(--primary-200);
-
-	--low-contrast-color: var(--secondary-600);
-	--medium-contrast-color: var(--secondary-800);
-	--high-contrast-color: var(--black);
-
-	@container style(--theme: dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--primary-900);
-		--foreground-color: var(--primary-800);
-
-		--low-contrast-color: var(--secondary-400);
-		--medium-contrast-color: var(--secondary-200);
-		--high-contrast-color: var(--white);
+	@each $prop in --primary --secondary --accent {
+		@each $light in $weights {
+			@each $dark in $weights {
+				#{$prop}-#{$light}-#{$dark}: var(#{$prop}-#{$light});
+				@container style(--theme: dark) {
+					#{$prop}-#{$light}-#{$dark}: var(#{$prop}-#{$dark});
+				}
+			}
+		}
 	}
 
 	/* --- Typography --- */
@@ -120,7 +109,7 @@ semantic-props {
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;
 	--display-family: var(--body-family);
-	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+	--mono-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
 	--brand-family: var(--body-family);
 
 	/* Font Weight: */
