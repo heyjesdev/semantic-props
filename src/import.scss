@@ -74,7 +74,7 @@ semantic-props {
 	--secondary-color: oklch(0.2 0.01 260);
 	--accent-color: oklch(0.6 0.15 240);
 
-	/* Declare Weights: */
+	/* Weight: */
 	$weights: 100 200 300 400 500 600 700 800 900;
 
 	@each $weight in $weights {
@@ -86,7 +86,6 @@ semantic-props {
 		$c: calc(c * sin(pi * $l));
 		$lch: $l $c h;
 
-		/* Declare Color Weights: */
 		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
 		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
 		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
