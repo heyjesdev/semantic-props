@@ -12,7 +12,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Changed
 
 - Changed sizes to all be derived from `--small`, `--medium` and `--large`.
-- Changed `--margin-size` value from `5%` to `5cqi`.
+- Changed `--margin-size` value from `5%` to `5vw`.
 - Changed `--accent-family` to `--brand-family`.
 
 ### Removed
