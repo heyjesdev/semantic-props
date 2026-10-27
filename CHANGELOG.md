@@ -6,7 +6,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added `--primary-color`, `--secondary-color` and `--tertiary-color` theme colors.
+- Added new relative color palette.
 
 ### Changed
 
@@ -16,7 +16,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
-- Removed legacy color formats in favor of relative colors.
+- Removed existing colors in favor of relative color palette.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
 

@@ -91,26 +91,18 @@
 	/* --- Colors --- */
 
 	/* Origin: */
+	--primary-color: var(--white);
+	--secondary-color: oklch(0.5 0.02 260);
+	--accent-color: oklch(0.5 0.2 260);
+	--success-color: oklch(0.6 0.15 160);
+	--warning-color: oklch(0.8 0.15 80);
+	--danger-color: oklch(0.6 0.2 30);
+	--info-color: oklch(0.7 0.15 200);
+
+	/* Weight: */
 	--white: white;
 	--black: black;
 
-	--accent: var(--blue);
-	--blue: oklch(0.6 0.15 240);
-	--brown: oklch(0.6 0.05 50);
-	--coral: oklch(0.7 0.2 40);
-	--cyan: oklch(0.7 0.15 180);
-	--gray: oklch(0.5 0.01 260);
-	--green: oklch(0.6 0.2 150);
-	--indigo: oklch(0.4 0.2 270);
-	--lime: oklch(0.7 0.15 120);
-	--magenta: oklch(0.6 0.2 330);
-	--orange: oklch(0.6 0.15 50);
-	--pink: oklch(0.8 0.1 10);
-	--red: oklch(0.5 0.2 30);
-	--violet: oklch(0.4 0.15 290);
-	--yellow: oklch(0.8 0.15 90);
-
-	/* Weight: */
 	$weights: 100 200 300 400 500 600 700 800 900;
 
 	@each $weight in $weights {
@@ -122,48 +114,14 @@
 		$c: calc(c * sin(pi * $l));
 		$lch: $l $c h;
 
-		--accent-#{$weight}: oklch(from var(--accent) #{$lch});
-		--blue-#{$weight}: oklch(from var(--blue) #{$lch});
-		--brown-#{$weight}: oklch(from var(--brown) #{$lch});
-		--coral-#{$weight}: oklch(from var(--coral) #{$lch});
-		--cyan-#{$weight}: oklch(from var(--cyan) #{$lch});
-		--gray-#{$weight}: oklch(from var(--gray) #{$lch});
-		--green-#{$weight}: oklch(from var(--green) #{$lch});
-		--indigo-#{$weight}: oklch(from var(--indigo) #{$lch});
-		--lime-#{$weight}: oklch(from var(--lime) #{$lch});
-		--magenta-#{$weight}: oklch(from var(--magenta) #{$lch});
-		--orange-#{$weight}: oklch(from var(--orange) #{$lch});
-		--pink-#{$weight}: oklch(from var(--pink) #{$lch});
-		--red-#{$weight}: oklch(from var(--red) #{$lch});
-		--violet-#{$weight}: oklch(from var(--violet) #{$lch});
-		--yellow-#{$weight}: oklch(from var(--yellow) #{$lch});
-	}
-
-	/* Theme: */
-	--background-color: var(--white);
-	--middleground-color: var(--gray-100);
-	--foreground-color: var(--gray-200);
-
-	--low-contrast-color: var(--gray-600);
-	--medium-contrast-color: var(--gray-800);
-	--high-contrast-color: var(--black);
-
-	--primary-color: var(--accent-500);
-	--secondary-color: var(--accent-600);
-	--tertiary-color: var(--accent-700);
-
-	@media (prefers-color-scheme: dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-900);
-		--foreground-color: var(--gray-800);
-
-		--low-contrast-color: var(--gray-400);
-		--medium-contrast-color: var(--gray-200);
-		--high-contrast-color: var(--white);
-
-		--primary-color: var(--accent-300);
-		--secondary-color: var(--accent-400);
-		--tertiary-color: var(--accent-500);
+		/* Declare Colors: */
+		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
+		--success-#{$weight}: oklch(from var(--success-color) #{$lch});
+		--warning-#{$weight}: oklch(from var(--warning-color) #{$lch});
+		--danger-#{$weight}: oklch(from var(--danger-color) #{$lch});
+		--info-#{$weight}: oklch(from var(--info-color) #{$lch});
 	}
 
 	/* --- Typography --- */
