@@ -91,7 +91,7 @@
 	/* --- Typography --- */
 
 	/* Font Size: */
-	--type-scale: 1.125;
+	--type-scale: 1.067;
 
 	--x-small-type: calc(var(--small-type) / var(--type-scale));
 	--small-type: calc(var(--medium-type) / var(--type-scale));
@@ -108,15 +108,15 @@
 	--9x-large-type: calc(var(--8x-large-type) * var(--type-scale));
 
 	@media (width >= 20rem) /* 320px */ {
-		--type-scale: 1.2;
+		--type-scale: 1.125;
 	}
 
 	@media (width >= 48rem) /* 768px */ {
-		--type-scale: 1.25;
+		--type-scale: 1.2;
 	}
 
 	@media (width >= 80rem) /* 1280px */ {
-		--type-scale: 1.33;
+		--type-scale: 1.25;
 	}
 
 	/* Font Family: */
