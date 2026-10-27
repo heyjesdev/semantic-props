@@ -246,6 +246,19 @@
 	--medium-sepia: sepia(0.75);
 	--strong-sepia: sepia(1);
 
+	/* --- Aspect Ratios --- */
+	--square-ratio: 1 / 1;
+	--landscape-ratio: 4 / 3;
+	--portrait-ratio: 3 / 4;
+	--video-ratio: 16 / 9;
+	--wide-ratio: 21 / 9;
+
+	/* --- Safe Areas --- */
+	--safe-top: env(safe-area-inset-top);
+	--safe-right: env(safe-area-inset-right);
+	--safe-bottom: env(safe-area-inset-bottom);
+	--safe-left: env(safe-area-inset-left);
+
 	/* --- Animations --- */
 
 	/* Timing: */

@@ -18,8 +18,7 @@ All relevant changes to Semantic Props will be documented here.
 
 - Removed legacy color formats in favor of relative colors.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
-- Removed unnecessary aspect-ratio props.
-- Removed unnecessary safe-area props.
+- Removed unnecessary derivative safe-area props.
 
 ### Fixed
 
