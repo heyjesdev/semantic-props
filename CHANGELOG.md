@@ -16,7 +16,6 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
-- Removed use of `@property`, opting scope to `:root`.
 - Removed legacy color formats in favor of relative colors.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary aspect-ratio props.

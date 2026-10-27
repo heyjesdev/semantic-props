@@ -1,10 +1,33 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-:root {
-	/* --- Queries --- */
+/* --- Queries --- */
 
-	/* Theme: */
-	--theme: none;
+@property --theme {
+	syntax: "<custom-ident>";
+	inherits: true;
+	initial-value: none;
+}
+
+@each $size in small, medium, large {
+	@property --#{$size}-breakpoint {
+		syntax: "true | false";
+		inherits: true;
+		initial-value: false;
+	}
+}
+
+:root {
+	@media (width >= 20rem) /* 320px */ {
+		--small-breakpoint: true;
+	}
+
+	@media (width >= 48rem) /* 768px */ {
+		--medium-breakpoint: true;
+	}
+
+	@media (width >= 80rem) /* 1280px */ {
+		--large-breakpoint: true;
+	}
 
 	/* Breakpoint: */
 	--small-breakpoint: false;
