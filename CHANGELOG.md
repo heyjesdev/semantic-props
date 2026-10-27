@@ -22,10 +22,6 @@ All relevant changes to Semantic Props will be documented here.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
 
-### Fixed
-
-- Fixed inaccessible color contrast.
-
 ## [2.1.1] - 2026-08-12
 
 ### Changed
