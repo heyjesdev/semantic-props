@@ -1,57 +1,28 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* --- Queries --- */
-
-@property --theme {
-	syntax: "<custom-ident>";
-	inherits: true;
-	initial-value: none;
-}
-
-@each $size in small, medium, large {
-	@property --#{$size}-breakpoint {
-		syntax: "true | false";
-		inherits: true;
-		initial-value: false;
-	}
-}
-
 :root {
-	@media (width >= 20rem) /* 320px */ {
-		--small-breakpoint: true;
-	}
-
-	@media (width >= 48rem) /* 768px */ {
-		--medium-breakpoint: true;
-	}
-
-	@media (width >= 80rem) /* 1280px */ {
-		--large-breakpoint: true;
-	}
-
-	/* Breakpoint: */
-	--small-breakpoint: false;
-	--medium-breakpoint: false;
-	--large-breakpoint: false;
-
-	@media (width >= 20rem) /* 320px */ {
-		--small-breakpoint: true;
-	}
-
-	@media (width >= 48rem) /* 768px */ {
-		--medium-breakpoint: true;
-	}
-
-	@media (width >= 80rem) /* 1280px */ {
-		--large-breakpoint: true;
-	}
-
 	/* --- Sizes --- */
 
-	/* Radius: */
-	--small-radius: 0.5rem; /* 8px */
-	--medium-radius: 1.25rem; /* 20px */
-	--large-radius: 2rem; /* 32px */
+	/* Absolute: */
+	--3x-small: calc(var(--2x-small) - (var(--medium) - var(--small)));
+	--2x-small: calc(var(--x-small) - (var(--medium) - var(--small)));
+	--x-small: calc(var(--small) - (var(--medium) - var(--small)));
+	--small: 0.8125rem;
+	--medium: 1rem;
+	--large: 1.25rem;
+	--x-large: calc(var(--large) + (var(--large) - var(--medium)));
+	--2x-large: calc(var(--x-large) + (var(--large) - var(--medium)));
+	--3x-large: calc(var(--2x-large) + (var(--large) - var(--medium)));
+	--4x-large: calc(var(--3x-large) + (var(--large) - var(--medium)));
+	--5x-large: calc(var(--4x-large) + (var(--large) - var(--medium)));
+	--6x-large: calc(var(--5x-large) + (var(--large) - var(--medium)));
+	--7x-large: calc(var(--6x-large) + (var(--large) - var(--medium)));
+	--8x-large: calc(var(--7x-large) + (var(--large) - var(--medium)));
+	--9x-large: calc(var(--8x-large) + (var(--large) - var(--medium)));
+
+	/* Relative: */
+	--smaller: 0.8125em;
+	--larger: 1.25em;
 
 	/* Container: */
 	--3x-small-container: 8rem; /* 128px */
@@ -64,26 +35,10 @@
 	--2x-large-container: 80rem; /* 1280px */
 	--3x-large-container: 90rem; /* 1440px */
 
-	/* Absolute: */
-	--3x-small: 0.25rem; /* 4px */
-	--2x-small: 0.5rem; /* 8px */
-	--x-small: 0.75rem; /* 12px */
-	--small: 0.875rem; /* 14px */
-	--medium: 1rem; /* 16px */
-	--large: 1.125rem; /* 18px */
-	--x-large: 1.25rem; /* 20px */
-	--2x-large: 1.5rem; /* 24px */
-	--3x-large: 1.875rem; /* 30px */
-	--4x-large: 2.25rem; /* 36px */
-	--5x-large: 3rem; /* 48px */
-	--6x-large: 3.75rem; /* 60px */
-	--7x-large: 4.5rem; /* 72px */
-	--8x-large: 6rem; /* 96px */
-	--9x-large: 8rem; /* 128px */
-
-	/* Relative: */
-	--smaller: 0.875em; /* 14/16px */
-	--larger: 1.125em; /* 18/16px */
+	/* Radius: */
+	--small-radius: 0.5rem; /* 8px */
+	--medium-radius: 1.25rem; /* 20px */
+	--large-radius: 2rem; /* 32px */
 
 	/* Margin: */
 	--margin-size: 5cqi;
@@ -125,6 +80,35 @@
 	}
 
 	/* --- Typography --- */
+
+	/* Font Size: */
+	--type-scale: 1.125;
+
+	--x-small-type: calc(var(--small-type) / var(--type-scale));
+	--small-type: calc(var(--medium-type) / var(--type-scale));
+	--medium-type: 1rem;
+	--large-type: calc(var(--medium-type) * var(--type-scale));
+	--x-large-type: calc(var(--large-type) * var(--type-scale));
+	--2x-large-type: calc(var(--x-large-type) * var(--type-scale));
+	--3x-large-type: calc(var(--2x-large-type) * var(--type-scale));
+	--4x-large-type: calc(var(--3x-large-type) * var(--type-scale));
+	--5x-large-type: calc(var(--4x-large-type) * var(--type-scale));
+	--6x-large-type: calc(var(--5x-large-type) * var(--type-scale));
+	--7x-large-type: calc(var(--6x-large-type) * var(--type-scale));
+	--8x-large-type: calc(var(--7x-large-type) * var(--type-scale));
+	--9x-large-type: calc(var(--8x-large-type) * var(--type-scale));
+
+	@media (width >= 20rem) /* 320px */ {
+		--type-scale: 1.2;
+	}
+
+	@media (width >= 48rem) /* 768px */ {
+		--type-scale: 1.25;
+	}
+
+	@media (width >= 80rem) /* 1280px */ {
+		--type-scale: 1.33;
+	}
 
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;

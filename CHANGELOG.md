@@ -6,16 +6,18 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added new relative color palette.
+- Added relative color palette.
+- Added typography size scale.
 
 ### Changed
 
-- Changed `-viewport` query props to `-breakpoint` suffix.
+- Changed sizes to all be derived from `--small`, `--medium` and `--large`.
 - Changed `--margin-size` value from `5%` to `5cqi`.
 - Changed `--accent-family` to `--brand-family`.
 
 ### Removed
 
+- Removed `@property` query props.
 - Removed existing colors in favor of relative color palette.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
