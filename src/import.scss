@@ -82,11 +82,9 @@ semantic-props {
 		$lch: $l $c h;
 
 		/* Declare Colors: */
-		@supports (color: oklch(from gray l c h)) {
-			--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
-			--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
-			--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
-		}
+		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
 	}
 
 	/* --- Sizes --- */
