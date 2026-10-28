@@ -1,31 +1,53 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-:root {
+semantic-props {
+	display: contents;
+
 	/* --- Colors --- */
 
-	/* Theme: */
+	/* Contextual: */
 	--background-color: var(--white);
-	--middleground-color: var(--gray-100);
-	--foreground-color: var(--gray-200);
+	--middleground-color: var(--primary-100);
+	--foreground-color: var(--primary-200);
 
-	--low-contrast-color: var(--gray-600);
-	--medium-contrast-color: var(--gray-800);
+	--low-contrast-color: var(--secondary-600);
+	--medium-contrast-color: var(--secondary-800);
 	--high-contrast-color: var(--black);
 
 	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
-		--middleground-color: var(--gray-900);
-		--foreground-color: var(--gray-800);
+		--middleground-color: var(--primary-900);
+		--foreground-color: var(--primary-800);
 
-		--low-contrast-color: var(--gray-400);
-		--medium-contrast-color: var(--gray-200);
+		--low-contrast-color: var(--secondary-400);
+		--medium-contrast-color: var(--secondary-200);
 		--high-contrast-color: var(--white);
 	}
 
-	/* Weight: */
+	/* Palette: */
 	--white: white;
 	--black: black;
+	--blue: oklch(0.6 0.15 240);
+	--brown: oklch(0.6 0.05 50);
+	--coral: oklch(0.7 0.2 40);
+	--cyan: oklch(0.7 0.15 180);
+	--gray: oklch(0.5 0.01 260);
+	--green: oklch(0.6 0.2 150);
+	--indigo: oklch(0.4 0.2 270);
+	--lime: oklch(0.7 0.15 120);
+	--magenta: oklch(0.6 0.2 330);
+	--orange: oklch(0.6 0.15 50);
+	--pink: oklch(0.8 0.1 10);
+	--red: oklch(0.5 0.2 30);
+	--violet: oklch(0.4 0.15 290);
+	--yellow: oklch(0.8 0.15 90);
 
+	/* Origin: */
+	--primary-color: var(--white);
+	--secondary-color: var(--gray);
+	--accent-color: var(--blue);
+
+	/* Weight: */
 	$weights: 100 200 300 400 500 600 700 800 900;
 
 	@each $weight in $weights {
@@ -38,20 +60,11 @@
 		$lch: $l $c h;
 
 		/* Declare Colors: */
-		--blue-#{$weight}: oklch(from oklch(0.6 0.15 240) #{$lch});
-		--brown-#{$weight}: oklch(from oklch(0.6 0.05 50) #{$lch});
-		--coral-#{$weight}: oklch(from oklch(0.7 0.2 40) #{$lch});
-		--cyan-#{$weight}: oklch(from oklch(0.7 0.15 180) #{$lch});
-		--gray-#{$weight}: oklch(from oklch(0.5 0.01 260) #{$lch});
-		--green-#{$weight}: oklch(from oklch(0.6 0.2 150) #{$lch});
-		--indigo-#{$weight}: oklch(from oklch(0.4 0.2 270) #{$lch});
-		--lime-#{$weight}: oklch(from oklch(0.7 0.15 120) #{$lch});
-		--magenta-#{$weight}: oklch(from oklch(0.6 0.2 330) #{$lch});
-		--orange-#{$weight}: oklch(from oklch(0.6 0.15 50) #{$lch});
-		--pink-#{$weight}: oklch(from oklch(0.8 0.1 10) #{$lch});
-		--red-#{$weight}: oklch(from oklch(0.5 0.2 30) #{$lch});
-		--violet-#{$weight}: oklch(from oklch(0.4 0.15 290) #{$lch});
-		--yellow-#{$weight}: oklch(from oklch(0.8 0.15 90) #{$lch});
+		@supports (color: oklch(from gray l c h)) {
+			--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+			--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+			--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
+		}
 	}
 
 	/* --- Sizes --- */
@@ -94,7 +107,7 @@
 	--large-radius: 2rem; /* 32px */
 
 	/* Margin: */
-	--margin-size: 5vw;
+	--margin-size: 5cqi;
 
 	/* --- Typography --- */
 

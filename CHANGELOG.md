@@ -6,19 +6,20 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added relative color palette.
-- Added typography size scale.
+- Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
+- Added responsive typography size scale.
 
 ### Changed
 
+- Changed selector from `:root` to `semantic-props` custom element.
 - Changed sizes to all be derived from `--small`, `--medium` and `--large`.
-- Changed `--margin-size` value from `5%` to `5vw`.
+- Changed `--margin-size` value from `5%` to `5cqi`.
 - Changed `--accent-family` to `--brand-family`.
 
 ### Removed
 
 - Removed `@property` query props.
-- Removed accent color props.
+- Removed existing color props (minus accent).
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
 
