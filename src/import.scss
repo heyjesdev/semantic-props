@@ -3,6 +3,28 @@
 semantic-props {
 	display: contents;
 
+	/* --- Queries --- */
+
+	/* Theme: */
+	--theme: none;
+
+	/* Breakpoint: */
+	--small-breakpoint: false;
+	--medium-breakpoint: false;
+	--large-breakpoint: false;
+
+	@container (width >= 20rem) /* 320px */ {
+		--small-breakpoint: true;
+	}
+
+	@container (width >= 48rem) /* 768px */ {
+		--medium-breakpoint: true;
+	}
+
+	@container (width >= 80rem) /* 1280px */ {
+		--large-breakpoint: true;
+	}
+
 	/* --- Colors --- */
 
 	/* Contextual: */
