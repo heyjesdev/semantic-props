@@ -7,7 +7,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Added
 
 - Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
-- Added responsive typography size scale.
+- Added independent typography sizes.
 
 ### Changed
 

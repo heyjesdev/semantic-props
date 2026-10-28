@@ -111,34 +111,26 @@ semantic-props {
 
 	/* --- Typography --- */
 
-	/* Font Size: */
-	--type-scale: 1.067;
+	/* Absolute: */
+	--3x-small-font: calc(var(--2x-small-font) - (var(--medium-font) - var(--small-font)));
+	--2x-small-font: calc(var(--x-small-font) - (var(--medium-font) - var(--small-font)));
+	--x-small-font: calc(var(--small-font) - (var(--medium-font) - var(--small-font)));
+	--small-font: 0.8125rem;
+	--medium-font: 1rem;
+	--large-font: 1.25rem;
+	--x-large-font: calc(var(--large-font) + (var(--large-font) - var(--medium-font)));
+	--2x-large-font: calc(var(--x-large-font) + (var(--large-font) - var(--medium-font)));
+	--3x-large-font: calc(var(--2x-large-font) + (var(--large-font) - var(--medium-font)));
+	--4x-large-font: calc(var(--3x-large-font) + (var(--large-font) - var(--medium-font)));
+	--5x-large-font: calc(var(--4x-large-font) + (var(--large-font) - var(--medium-font)));
+	--6x-large-font: calc(var(--5x-large-font) + (var(--large-font) - var(--medium-font)));
+	--7x-large-font: calc(var(--6x-large-font) + (var(--large-font) - var(--medium-font)));
+	--8x-large-font: calc(var(--7x-large-font) + (var(--large-font) - var(--medium-font)));
+	--9x-large-font: calc(var(--8x-large-font) + (var(--large-font) - var(--medium-font)));
 
-	--x-small-type: calc(var(--small-type) / var(--type-scale));
-	--small-type: calc(var(--medium-type) / var(--type-scale));
-	--medium-type: 1rem;
-	--large-type: calc(var(--medium-type) * var(--type-scale));
-	--x-large-type: calc(var(--large-type) * var(--type-scale));
-	--2x-large-type: calc(var(--x-large-type) * var(--type-scale));
-	--3x-large-type: calc(var(--2x-large-type) * var(--type-scale));
-	--4x-large-type: calc(var(--3x-large-type) * var(--type-scale));
-	--5x-large-type: calc(var(--4x-large-type) * var(--type-scale));
-	--6x-large-type: calc(var(--5x-large-type) * var(--type-scale));
-	--7x-large-type: calc(var(--6x-large-type) * var(--type-scale));
-	--8x-large-type: calc(var(--7x-large-type) * var(--type-scale));
-	--9x-large-type: calc(var(--8x-large-type) * var(--type-scale));
-
-	@media (width >= 20rem) /* 320px */ {
-		--type-scale: 1.125;
-	}
-
-	@media (width >= 48rem) /* 768px */ {
-		--type-scale: 1.2;
-	}
-
-	@media (width >= 80rem) /* 1280px */ {
-		--type-scale: 1.25;
-	}
+	/* Relative: */
+	--smaller-font: 0.8125em;
+	--larger-font: 1.25em;
 
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;
