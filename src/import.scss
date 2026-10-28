@@ -55,7 +55,7 @@ semantic-props {
 		$percentage: calc((900 - $weight) / (900 - 100));
 
 		/* Calculate OKLCH Channels: */
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
 		$c: calc(c * sin(pi * $l));
 		$lch: $l $c h;
 
