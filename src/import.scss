@@ -52,7 +52,7 @@ semantic-props {
 
 	@each $weight in $weights {
 		/* Calculate Percentage from Weight: */
-		$percentage: calc((900 - $weight) / (900 - 100));
+		$percentage: calc((950 - $weight) / (950 - 50));
 
 		/* Calculate OKLCH Channels: */
 		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
