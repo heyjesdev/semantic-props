@@ -112,8 +112,6 @@ semantic-props {
 	/* --- Typography --- */
 
 	/* Absolute: */
-	--3x-small-font: calc(var(--2x-small-font) - (var(--medium-font) - var(--small-font)));
-	--2x-small-font: calc(var(--x-small-font) - (var(--medium-font) - var(--small-font)));
 	--x-small-font: calc(var(--small-font) - (var(--medium-font) - var(--small-font)));
 	--small-font: 0.8125rem;
 	--medium-font: 1rem;
