@@ -46,28 +46,10 @@ semantic-props {
 		--high-contrast-color: var(--secondary-50);
 	}
 
-	/* Palette: */
-	--white: white;
-	--black: black;
-	--blue: oklch(0.6 0.15 240);
-	--brown: oklch(0.6 0.05 50);
-	--coral: oklch(0.7 0.2 40);
-	--cyan: oklch(0.7 0.15 180);
-	--gray: oklch(0.5 0.01 260);
-	--green: oklch(0.6 0.2 150);
-	--indigo: oklch(0.4 0.2 270);
-	--lime: oklch(0.7 0.15 120);
-	--magenta: oklch(0.6 0.2 330);
-	--orange: oklch(0.6 0.15 50);
-	--pink: oklch(0.8 0.1 10);
-	--red: oklch(0.5 0.2 30);
-	--violet: oklch(0.4 0.15 290);
-	--yellow: oklch(0.8 0.15 90);
-
 	/* Origin: */
-	--primary-color: var(--white);
-	--secondary-color: var(--gray);
-	--accent-color: var(--blue);
+	--primary-color: white;
+	--secondary-color: oklch(0.5 0.01 260);
+	--accent-color: oklch(0.6 0.15 240);
 
 	/* Weight: */
 	$weights: 50 100 200 300 400 500 600 700 800 900 950;
