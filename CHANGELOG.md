@@ -4,6 +4,8 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
+A major architectural update introducing the `semantic-props` custom element, relative color syntax, and various adjustments and cleanup.
+
 ### Added
 
 - Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
