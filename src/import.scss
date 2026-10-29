@@ -27,29 +27,27 @@ semantic-props {
 
 	/* --- Colors --- */
 
-	/* Contextual: */
-	--background-color: var(--primary-50);
-	--middleground-color: var(--primary-100);
-	--foreground-color: var(--primary-200);
-
-	--low-contrast-color: var(--secondary-600);
-	--medium-contrast-color: var(--secondary-800);
-	--high-contrast-color: var(--secondary-950);
-
-	@container style(--theme: dark) {
-		--background-color: var(--primary-950);
-		--middleground-color: var(--primary-900);
-		--foreground-color: var(--primary-800);
-
-		--low-contrast-color: var(--secondary-400);
-		--medium-contrast-color: var(--secondary-200);
-		--high-contrast-color: var(--secondary-50);
-	}
+	/* Palette: */
+	--white: white;
+	--black: black;
+	--gray: oklch(0.6 0.02 250);
+	--red: oklch(0.6 0.2 30);
+	--pink: oklch(0.8 0.1 360);
+	--purple: oklch(0.6 0.2 320);
+	--violet: oklch(0.6 0.2 290);
+	--indigo: oklch(0.6 0.2 270);
+	--blue: oklch(0.6 0.15 250);
+	--cyan: oklch(0.8 0.1 210);
+	--teal: oklch(0.7 0.15 170);
+	--green: oklch(0.7 0.2 150);
+	--lime: oklch(0.8 0.2 130);
+	--yellow: oklch(0.9 0.15 90);
+	--orange: oklch(0.8 0.15 60);
 
 	/* Origin: */
-	--primary-color: white;
-	--secondary-color: oklch(0.5 0.01 260);
-	--accent-color: oklch(0.6 0.15 240);
+	--primary-color: var(--white);
+	--secondary-color: var(--gray);
+	--accent-color: var(--blue);
 
 	/* Weight: */
 	$weights: 50 100 200 300 400 500 600 700 800 900 950;
@@ -67,6 +65,25 @@ semantic-props {
 		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
 		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
 		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
+	}
+
+	/* Contextual: */
+	--background-color: var(--primary-50);
+	--middleground-color: var(--primary-100);
+	--foreground-color: var(--primary-200);
+
+	--low-contrast-color: var(--secondary-600);
+	--medium-contrast-color: var(--secondary-800);
+	--high-contrast-color: var(--secondary-950);
+
+	@container style(--theme: dark) {
+		--background-color: var(--primary-950);
+		--middleground-color: var(--primary-900);
+		--foreground-color: var(--primary-800);
+
+		--low-contrast-color: var(--secondary-400);
+		--medium-contrast-color: var(--secondary-200);
+		--high-contrast-color: var(--secondary-50);
 	}
 
 	/* --- Sizes --- */
