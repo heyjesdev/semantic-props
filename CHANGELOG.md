@@ -6,13 +6,13 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added `-breakpoint` query props using `@container` versus `@media`.
 - Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
 - Added independent typography sizes.
 
 ### Changed
 
 - Changed selector from `:root` to `semantic-props` custom element.
+- Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed `(prefers-color-scheme: dark)` use to `style(--theme: dark)` queries.
 - Changed sizes to all be derived from `--small`, `--medium` and `--large`.
 - Changed `--margin-size` value from `5%` to `5cqi`.
