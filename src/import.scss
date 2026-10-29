@@ -8,6 +8,23 @@ semantic-props {
 	/* Theme: */
 	--theme: none;
 
+	/* Viewport: */
+	--small-viewport: false;
+	--medium-viewport: false;
+	--large-viewport: false;
+
+	@media (width >= 20rem) /* 320px */ {
+		--small-viewport: true;
+	}
+
+	@media (width >= 48rem) /* 768px */ {
+		--medium-viewport: true;
+	}
+
+	@media (width >= 80rem) /* 1280px */ {
+		--large-viewport: true;
+	}
+
 	/* Breakpoint: */
 	--small-breakpoint: false;
 	--medium-breakpoint: false;
