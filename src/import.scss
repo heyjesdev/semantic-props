@@ -88,26 +88,25 @@ semantic-props {
 
 	/* --- Sizes --- */
 
-	/* Absolute: */
-	--3x-small: calc(var(--2x-small) - (var(--medium) - var(--small)));
-	--2x-small: calc(var(--x-small) - (var(--medium) - var(--small)));
-	--x-small: calc(var(--small) - (var(--medium) - var(--small)));
-	--small: 0.8125rem;
-	--medium: 1rem;
-	--large: 1.25rem;
-	--x-large: calc(var(--large) + (var(--large) - var(--medium)));
-	--2x-large: calc(var(--x-large) + (var(--large) - var(--medium)));
-	--3x-large: calc(var(--2x-large) + (var(--large) - var(--medium)));
-	--4x-large: calc(var(--3x-large) + (var(--large) - var(--medium)));
-	--5x-large: calc(var(--4x-large) + (var(--large) - var(--medium)));
-	--6x-large: calc(var(--5x-large) + (var(--large) - var(--medium)));
-	--7x-large: calc(var(--6x-large) + (var(--large) - var(--medium)));
-	--8x-large: calc(var(--7x-large) + (var(--large) - var(--medium)));
-	--9x-large: calc(var(--8x-large) + (var(--large) - var(--medium)));
+	/* General: */
+	--smaller: 0.8125;
+	--larger: 1.25;
 
-	/* Relative: */
-	--smaller: 0.8125em;
-	--larger: 1.25em;
+	--3x-small: calc(var(--2x-small) * var(--smaller));
+	--2x-small: calc(var(--x-small) * var(--smaller));
+	--x-small: calc(var(--small) * var(--smaller));
+	--small: calc(var(--medium) * var(--smaller));
+	--medium: 1rem;
+	--large: calc(var(--medium) * var(--larger));
+	--x-large: calc(var(--large) * var(--larger));
+	--2x-large: calc(var(--x-large) * var(--larger));
+	--3x-large: calc(var(--2x-large) * var(--larger));
+	--4x-large: calc(var(--3x-large) * var(--larger));
+	--5x-large: calc(var(--4x-large) * var(--larger));
+	--6x-large: calc(var(--5x-large) * var(--larger));
+	--7x-large: calc(var(--6x-large) * var(--larger));
+	--8x-large: calc(var(--7x-large) * var(--larger));
+	--9x-large: calc(var(--8x-large) * var(--larger));
 
 	/* Container: */
 	--3x-small-container: 8rem; /* 128px */
@@ -130,24 +129,23 @@ semantic-props {
 
 	/* --- Typography --- */
 
-	/* Absolute: */
-	--x-small-font: calc(var(--small-font) - (var(--medium-font) - var(--small-font)));
-	--small-font: 0.8125rem;
-	--medium-font: 1rem;
-	--large-font: 1.25rem;
-	--x-large-font: calc(var(--large-font) + (var(--large-font) - var(--medium-font)));
-	--2x-large-font: calc(var(--x-large-font) + (var(--large-font) - var(--medium-font)));
-	--3x-large-font: calc(var(--2x-large-font) + (var(--large-font) - var(--medium-font)));
-	--4x-large-font: calc(var(--3x-large-font) + (var(--large-font) - var(--medium-font)));
-	--5x-large-font: calc(var(--4x-large-font) + (var(--large-font) - var(--medium-font)));
-	--6x-large-font: calc(var(--5x-large-font) + (var(--large-font) - var(--medium-font)));
-	--7x-large-font: calc(var(--6x-large-font) + (var(--large-font) - var(--medium-font)));
-	--8x-large-font: calc(var(--7x-large-font) + (var(--large-font) - var(--medium-font)));
-	--9x-large-font: calc(var(--8x-large-font) + (var(--large-font) - var(--medium-font)));
+	/* Font Size: */
+	--smaller-font: 0.8125;
+	--larger-font: 1.25;
 
-	/* Relative: */
-	--smaller-font: 0.8125em;
-	--larger-font: 1.25em;
+	--x-small-font: calc(var(--small-font) * var(--smaller-font));
+	--small-font: calc(var(--medium-font) * var(--smaller-font));
+	--medium-font: 1rem;
+	--large-font: calc(var(--medium-font) * var(--larger-font));
+	--x-large-font: calc(var(--large-font) * var(--larger-font));
+	--2x-large-font: calc(var(--x-large-font) * var(--larger-font));
+	--3x-large-font: calc(var(--2x-large-font) * var(--larger-font));
+	--4x-large-font: calc(var(--3x-large-font) * var(--larger-font));
+	--5x-large-font: calc(var(--4x-large-font) * var(--larger-font));
+	--6x-large-font: calc(var(--5x-large-font) * var(--larger-font));
+	--7x-large-font: calc(var(--6x-large-font) * var(--larger-font));
+	--8x-large-font: calc(var(--7x-large-font) * var(--larger-font));
+	--9x-large-font: calc(var(--8x-large-font) * var(--larger-font));
 
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;
