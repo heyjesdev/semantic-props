@@ -89,7 +89,7 @@ semantic-props {
 	/* --- Sizes --- */
 
 	/* General: */
-	--smaller: 0.8125;
+	--smaller: 0.75;
 	--larger: 1.25;
 
 	--3x-small: calc(var(--2x-small) * var(--smaller));
@@ -130,8 +130,8 @@ semantic-props {
 	/* --- Typography --- */
 
 	/* Font Size: */
-	--smaller-font: 0.8125;
-	--larger-font: 1.25;
+	--smaller-font: 0.875;
+	--larger-font: 1.2;
 
 	--x-small-font: calc(var(--small-font) * var(--smaller-font));
 	--small-font: calc(var(--medium-font) * var(--smaller-font));
