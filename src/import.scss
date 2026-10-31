@@ -27,63 +27,62 @@ semantic-props {
 
 	/* --- Colors --- */
 
-	/* Palette: */
+	/* White/Black: */
 	--white: white;
 	--black: black;
-	--gray: oklch(0.6 0.02 250);
-	--red: oklch(0.6 0.2 30);
-	--pink: oklch(0.8 0.1 360);
-	--purple: oklch(0.6 0.2 320);
-	--violet: oklch(0.6 0.2 290);
-	--indigo: oklch(0.6 0.2 270);
-	--blue: oklch(0.6 0.15 250);
-	--cyan: oklch(0.8 0.1 210);
-	--teal: oklch(0.7 0.15 170);
-	--green: oklch(0.7 0.2 150);
-	--lime: oklch(0.8 0.2 130);
-	--yellow: oklch(0.9 0.15 90);
-	--orange: oklch(0.8 0.15 60);
 
 	/* Origin: */
-	--primary-color: var(--white);
-	--secondary-color: var(--gray);
-	--accent-color: var(--blue);
+	$origin: (
+		--gray: oklch(0.6 0.02 250),
+		--red: oklch(0.6 0.2 30),
+		--pink: oklch(0.8 0.1 360),
+		--purple: oklch(0.6 0.2 320),
+		--violet: oklch(0.6 0.2 290),
+		--indigo: oklch(0.6 0.2 270),
+		--blue: oklch(0.6 0.15 250),
+		--cyan: oklch(0.8 0.1 210),
+		--teal: oklch(0.7 0.15 170),
+		--green: oklch(0.7 0.2 150),
+		--lime: oklch(0.8 0.2 130),
+		--yellow: oklch(0.9 0.15 90),
+		--orange: oklch(0.8 0.15 60)
+	);
 
-	/* Weight: */
-	$weights: 50 100 200 300 400 500 600 700 800 900 950;
+	@each $prop, $color in $origin {
+		/* Declare Origin: */
+		#{$prop}: $color;
 
-	@each $weight in $weights {
-		/* Calculate Percentage from Weight: */
-		$percentage: calc((950 - $weight) / (950 - 50));
+		/* Declare Weight: */
+		@each $weight in 100 200 300 400 500 600 700 800 900 {
+			/* Calculate Percentage from Weight: */
+			$percentage: calc((900 - $weight) / (900 - 100));
 
-		/* Calculate OKLCH Channels: */
-		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
-		$c: calc(c * sin(pi * $l));
-		$lch: $l $c h;
+			/* Calculate OKLCH Channels: */
+			$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+			$c: calc(c * sin(pi * $l));
+			$lch: $l $c h;
 
-		/* Declare Colors: */
-		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
-		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
-		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
+			#{$prop}-#{$weight}: oklch(from var(#{$prop}) #{$lch});
+		}
 	}
 
-	/* Contextual: */
-	--background-color: var(--primary-50);
-	--middleground-color: var(--primary-100);
-	--foreground-color: var(--primary-200);
+	/* Theme: */
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
 
-	--low-contrast-color: var(--secondary-600);
-	--medium-contrast-color: var(--secondary-800);
-	--high-contrast-color: var(--secondary-950);
+	--low-contrast-color: var(--gray-600);
+	--medium-contrast-color: var(--gray-800);
+	--high-contrast-color: var(--black);
 
 	@container style(--theme: dark) {
-		--background-color: var(--primary-950);
-		--middleground-color: var(--primary-900);
-		--foreground-color: var(--primary-800);
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
 
-		--low-contrast-color: var(--secondary-400);
-		--medium-contrast-color: var(--secondary-200);
-		--high-contrast-color: var(--secondary-50);
+		--low-contrast-color: var(--gray-400);
+		--medium-contrast-color: var(--gray-200);
+		--high-contrast-color: var(--white);
 	}
 
 	/* --- Sizes --- */

@@ -8,7 +8,7 @@ A major architectural update introducing the `semantic-props` custom element, re
 
 ### Added
 
-- Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
+- Added color palette based on relative color origin props.
 - Added independent typography sizes.
 
 ### Changed
@@ -23,7 +23,7 @@ A major architectural update introducing the `semantic-props` custom element, re
 ### Removed
 
 - Removed use of `@property`, opting scope to `semantic-props`.
-- Removed existing color props (minus accent).
+- Removed implementation of existing color props.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
 
