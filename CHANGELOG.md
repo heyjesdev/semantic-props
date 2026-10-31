@@ -4,18 +4,17 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-A major architectural update introducing the `semantic-props` custom element, relative color syntax, and various adjustments and cleanup.
+A major architectural update introducing the `semantic-props` custom element, color-mix syntax, and various adjustments and cleanup.
 
 ### Added
 
-- Added `--primary-color`, `--secondary-color` and `--accent-color` relative color palettes.
+- Added `--primary-color`, `--secondary-color` and `--accent-color` color-mix palettes.
 - Added independent typography sizes.
 
 ### Changed
 
 - Changed selector from `:root` to `semantic-props` custom element.
 - Changed `-viewport` query props to `-breakpoint` suffix.
-- Changed `(prefers-color-scheme: dark)` use to `style(--theme: dark)` queries.
 - Changed sizes to be based from `--smaller` and `--larger`.
 - Changed `--margin-size` value from `5%` to `5cqi`.
 - Changed `--accent-family` to `--brand-family`.
@@ -23,7 +22,7 @@ A major architectural update introducing the `semantic-props` custom element, re
 ### Removed
 
 - Removed use of `@property`, opting scope to `semantic-props`.
-- Removed existing color props (minus accent).
+- Removed existing color props (minus theming colors).
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
 
