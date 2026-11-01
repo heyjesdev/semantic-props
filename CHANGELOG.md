@@ -4,7 +4,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-A major architectural evolution. Transitioning from a globally scoped collection of CSS custom properties into an independently scoped, configurable design-system. This release expands native CSS capabilities, introduces configurable color and sizing systems, and simplifies the underlying implementation.
+A major architectural evolution. Transitioning from a globally scoped collection of CSS custom properties into an versioned scoped, configurable design system. This release expands native CSS capabilities, introduces configurable color and sizing systems, and simplifies the underlying implementation.
 
 ### Added
 
@@ -13,7 +13,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 
 ### Changed
 
-- Changed selector from `:root` to the `<semantic-props>` custom element, enabling independently scoped instances.
+- Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
 - Changed `--margin-size` to use container-relative units (`5cqi`).
