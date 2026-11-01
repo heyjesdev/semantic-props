@@ -25,6 +25,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 - Removed existing precompiled color props.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
+- Removed unnecessary transform props.
 
 ## [2.1.1] - 2026-08-12
 
