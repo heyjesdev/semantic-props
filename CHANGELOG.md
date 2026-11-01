@@ -4,32 +4,27 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-A major architectural update introducing the `semantic-props` custom element, relative color syntax, and various adjustments and cleanup.
+A major architectural evolution. Transitioning from a globally scoped collection of CSS custom properties into an independently scoped, configurable design-system. This release expands native CSS capabilities, introduces configurable color and sizing systems, and simplifies the underlying implementation.
 
 ### Added
 
-- Added color palette based on relative color origin props.
-- Added independent typography sizes.
+- Added configurable color palettes generated from relative color origins.
+- Added independent typographic scale with its own sizing modifiers.
 
 ### Changed
 
-- Changed selector from `:root` to `semantic-props` custom element.
+- Changed selector from `:root` to the `<semantic-props>` custom element, enabling independently scoped instances.
 - Changed `-viewport` query props to `-breakpoint` suffix.
-- Changed `(prefers-color-scheme: dark)` use to `style(--theme: dark)` queries.
-- Changed sizes to be based from `--smaller` and `--larger`.
-- Changed `--margin-size` value from `5%` to `5cqi`.
-- Changed `--accent-family` to `--brand-family`.
+- Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
+- Changed `--margin-size` to use container-relative units (`5cqi`).
+- Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
 
-- Removed use of `@property`, opting scope to `semantic-props`.
-- Removed implementation of existing color props.
+- Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
+- Removed existing precompiled color props.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed unnecessary derivative safe-area props.
-
-### Fixed
-
-- Fixed inaccessible color contrast.
 
 ## [2.1.1] - 2026-08-12
 

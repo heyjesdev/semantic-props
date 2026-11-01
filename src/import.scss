@@ -33,6 +33,9 @@ semantic-props {
 
 	/* Origin: */
 	$origin: (
+		--primary: var(--white),
+		--secondary: var(--black),
+		--accent: var(--blue),
 		--gray: oklch(0.6 0.02 250),
 		--red: oklch(0.6 0.2 30),
 		--pink: oklch(0.8 0.1 360),
