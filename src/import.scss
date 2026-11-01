@@ -27,46 +27,42 @@ semantic-props[version="3"] {
 
 	/* --- Colors --- */
 
-	/* White/Black: */
+	/* Origin: */
 	--white: white;
 	--black: black;
+	--gray: oklch(0.6 0.02 250);
+	--red: oklch(0.6 0.2 30);
+	--pink: oklch(0.8 0.1 360);
+	--purple: oklch(0.6 0.2 320);
+	--violet: oklch(0.6 0.2 290);
+	--indigo: oklch(0.6 0.2 270);
+	--blue: oklch(0.6 0.15 250);
+	--cyan: oklch(0.8 0.1 210);
+	--teal: oklch(0.7 0.15 170);
+	--green: oklch(0.7 0.2 150);
+	--lime: oklch(0.8 0.2 130);
+	--yellow: oklch(0.9 0.15 90);
+	--orange: oklch(0.8 0.15 60);
 
-	/* Origin: */
-	$origin: (
-		--primary: var(--white),
-		--secondary: var(--black),
-		--accent: var(--blue),
-		--gray: oklch(0.6 0.02 250),
-		--red: oklch(0.6 0.2 30),
-		--pink: oklch(0.8 0.1 360),
-		--purple: oklch(0.6 0.2 320),
-		--violet: oklch(0.6 0.2 290),
-		--indigo: oklch(0.6 0.2 270),
-		--blue: oklch(0.6 0.15 250),
-		--cyan: oklch(0.8 0.1 210),
-		--teal: oklch(0.7 0.15 170),
-		--green: oklch(0.7 0.2 150),
-		--lime: oklch(0.8 0.2 130),
-		--yellow: oklch(0.9 0.15 90),
-		--orange: oklch(0.8 0.15 60)
-	);
+	/* Theme: */
+	--primary-color: var(--white);
+	--secondary-color: var(--black);
+	--accent-color: var(--blue);
 
-	@each $prop, $color in $origin {
-		/* Declare Origin: */
-		#{$prop}: $color;
+	/* Weight: */
+	@each $weight in 100 200 300 400 500 600 700 800 900 {
+		/* Calculate Percentage from Weight: */
+		$percentage: calc((900 - $weight) / (900 - 100));
 
-		/* Declare Weight: */
-		@each $weight in 100 200 300 400 500 600 700 800 900 {
-			/* Calculate Percentage from Weight: */
-			$percentage: calc((900 - $weight) / (900 - 100));
+		/* Calculate OKLCH Channels: */
+		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$c: calc(c * sin(pi * $l));
+		$lch: $l $c h;
 
-			/* Calculate OKLCH Channels: */
-			$l: calc(0.2 + (0.95 - 0.2) * $percentage);
-			$c: calc(c * sin(pi * $l));
-			$lch: $l $c h;
-
-			#{$prop}-#{$weight}: oklch(from var(#{$prop}) #{$lch});
-		}
+		/* Declare Colors: */
+		--primary-#{$weight}: oklch(from var(--primary-color) #{$lch});
+		--secondary-#{$weight}: oklch(from var(--secondary-color) #{$lch});
+		--accent-#{$weight}: oklch(from var(--accent-color) #{$lch});
 	}
 
 	/* --- Sizes --- */
