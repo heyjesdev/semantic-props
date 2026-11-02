@@ -10,6 +10,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 
 - Added configurable color palettes generated from relative color origins.
 - Added independent typographic scale with its own sizing modifiers.
+- Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
 ### Changed
 
@@ -24,6 +25,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
 - Removed existing precompiled color props.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
+- Removed low/high `hue-rotate()` filter props.
 - Removed unnecessary derivative safe-area props.
 - Removed unnecessary transform props.
 

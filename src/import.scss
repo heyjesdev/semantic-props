@@ -182,8 +182,8 @@ semantic-props[version="3"] {
 	--strong-grayscale: grayscale(1);
 
 	/* Hue Rotate: */
-	--low-hue-rotate: hue-rotate(30deg);
-	--high-hue-rotate: hue-rotate(300deg);
+	--positive-hue-rotate: hue-rotate(30deg);
+	--negative-hue-rotate: hue-rotate(-30deg);
 
 	/* Invert: */
 	--weak-invert: invert(0.6);
