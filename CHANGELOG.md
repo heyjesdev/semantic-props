@@ -17,7 +17,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
-- Changed `--margin-size` to use container-relative units (`5cqi`).
+- Changed `--margin-size` to use viewport-relative units (`5vw`).
 - Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
