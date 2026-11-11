@@ -4,28 +4,28 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-A major architectural evolution. Transitioning from a globally scoped collection of CSS custom properties into an versioned scoped, configurable design system. This release expands native CSS capabilities, introduces configurable color and sizing systems, and simplifies the underlying implementation.
+This **breaking change** release aims to simplify scope, configuration and implementation.
 
 ### Added
 
-- Added teal color palette.
-- Added independent typographic scale with its own sizing modifiers.
+- Added `--teal-{100-900}` colors.
+- Added asymmetric modular font scale using `--smaller-font` and `--larger-font` modifiers.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
-- Changed magenta color to purple.
-- Changed background/middleground/foreground color names to primary/secondary/tertiary.
+- Changed `--magenta-{100-900}` colors to `--purple-{100-900}`.
+- Changed `--{background|middleground|foreground}-color` to `--{primary|secondary|tertiary}-color` props.
 - Changed `-viewport` query props to `-breakpoint` suffix.
-- Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
+- Changed sizes to use asymmetric `--smaller` and `--larger` modifiers.
 - Changed `--margin-size` to use viewport-relative units (`5vw`).
 - Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
-- Removed coral color palette.
+- Removed `--coral-{100-900}` colors.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed low/high `hue-rotate()` filter props.
 - Removed unnecessary derivative safe-area props.
