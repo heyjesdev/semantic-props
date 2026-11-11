@@ -8,13 +8,14 @@ A major architectural evolution. Transitioning from a globally scoped collection
 
 ### Added
 
-- Added configurable color palettes generated from relative color origins.
+- Added teal color palette.
 - Added independent typographic scale with its own sizing modifiers.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
+- Changed magenta color to purple.
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
 - Changed `--margin-size` to use viewport-relative units (`5vw`).
@@ -23,7 +24,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 ### Removed
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
-- Removed existing precompiled color props.
+- Removed coral color palette.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed low/high `hue-rotate()` filter props.
 - Removed unnecessary derivative safe-area props.
