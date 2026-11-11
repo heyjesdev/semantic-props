@@ -80,9 +80,6 @@
 	/* --- Sizes --- */
 
 	/* General: */
-	--smaller: 0.75;
-	--larger: 1.25;
-
 	--3x-small: calc(var(--2x-small) * var(--smaller));
 	--2x-small: calc(var(--x-small) * var(--smaller));
 	--x-small: calc(var(--small) * var(--smaller));
@@ -98,6 +95,9 @@
 	--7x-large: calc(var(--6x-large) * var(--larger));
 	--8x-large: calc(var(--7x-large) * var(--larger));
 	--9x-large: calc(var(--8x-large) * var(--larger));
+
+	--smaller: 0.75;
+	--larger: 1.25;
 
 	/* Container: */
 	--3x-small-container: 8rem; /* 128px */
@@ -121,9 +121,6 @@
 	/* --- Typography --- */
 
 	/* Font Size: */
-	--smaller-font: 0.875;
-	--larger-font: 1.2;
-
 	--x-small-font: calc(var(--small-font) * var(--smaller-font));
 	--small-font: calc(var(--medium-font) * var(--smaller-font));
 	--medium-font: 1rem;
@@ -137,6 +134,9 @@
 	--7x-large-font: calc(var(--6x-large-font) * var(--larger-font));
 	--8x-large-font: calc(var(--7x-large-font) * var(--larger-font));
 	--9x-large-font: calc(var(--8x-large-font) * var(--larger-font));
+
+	--smaller-font: 0.875;
+	--larger-font: 1.2;
 
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;
