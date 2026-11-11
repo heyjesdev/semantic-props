@@ -32,12 +32,12 @@
 	--black: black;
 
 	/* Weight: */
-	@each $weight in 100 200 300 400 500 600 700 800 900 {
+	@each $weight in 50 100 200 300 400 500 600 700 800 900 950 {
 		/* Calculate Percentage: */
-		$percentage: calc((900 - $weight) / (900 - 100));
+		$percentage: calc((950 - $weight) / (950 - 50));
 
 		/* Calculate OKLCH Channels: */
-		$l: calc(0.15 + (0.95 - 0.15) * $percentage);
+		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
 		$c: calc(c * sin(pi * $l));
 		$lch: $l $c h;
 
@@ -53,15 +53,15 @@
 		--pink-#{$weight}: oklch(from oklch(0.8 0.1 360) #{$lch});
 		--purple-#{$weight}: oklch(from oklch(0.6 0.2 320) #{$lch});
 		--red-#{$weight}: oklch(from oklch(0.6 0.2 30) #{$lch});
-		--tea-#{$weight}l: oklch(from oklch(0.7 0.15 170) #{$lch});
+		--teal-#{$weight}: oklch(from oklch(0.7 0.15 170) #{$lch});
 		--violet-#{$weight}: oklch(from oklch(0.6 0.2 290) #{$lch});
 		--yellow-#{$weight}: oklch(from oklch(0.9 0.15 90) #{$lch});
 	}
 
 	/* Theme: */
 	--primary-color: var(--white);
-	--secondary-color: var(--gray-100);
-	--tertiary-color: var(--gray-200);
+	--secondary-color: var(--gray-50);
+	--tertiary-color: var(--gray-100);
 
 	--low-contrast-color: var(--gray-600);
 	--medium-contrast-color: var(--gray-800);
@@ -69,8 +69,8 @@
 
 	@media (prefers-color-scheme: dark) {
 		--primary-color: var(--black);
-		--secondary-color: var(--gray-900);
-		--tertiary-color: var(--gray-800);
+		--secondary-color: var(--gray-950);
+		--tertiary-color: var(--gray-900);
 
 		--low-contrast-color: var(--gray-400);
 		--medium-contrast-color: var(--gray-200);
