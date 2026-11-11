@@ -16,6 +16,7 @@ A major architectural evolution. Transitioning from a globally scoped collection
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
 - Changed magenta color to purple.
+- Changed background/middleground/foreground color names to primary/secondary/tertiary.
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed spatial sizing scales to use configurable `--smaller` and `--larger` modifiers.
 - Changed `--margin-size` to use viewport-relative units (`5vw`).
