@@ -8,15 +8,13 @@ This **breaking change** release aims to simplify scope, configuration and imple
 
 ### Added
 
-- Added `--teal-{100-900}` colors.
+- Added per-hue relative colors palette.
 - Added asymmetric modular font scale using `--smaller-font` and `--larger-font` modifiers.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
-- Changed `--magenta-{100-900}` colors to `--purple-{100-900}`.
-- Changed `--{background|middleground|foreground}-color` to `--{primary|secondary|tertiary}-color` props.
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed sizes to use asymmetric `--smaller` and `--larger` modifiers.
 - Changed `--margin-size` to use viewport-relative units (`5vw`).
@@ -25,7 +23,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 ### Removed
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
-- Removed `--coral-{100-900}` colors.
+- Removed existing colors palette.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
 - Removed low/high `hue-rotate()` filter props.
 - Removed unnecessary derivative safe-area props.
