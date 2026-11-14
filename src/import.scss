@@ -32,50 +32,55 @@
 	--black: black;
 
 	/* Origin: */
-	--gray: oklch(0.6 0.02 250);
-	--red: oklch(0.6 0.2 30);
-	--coral: oklch(0.7 0.15 45);
-	--orange: oklch(0.8 0.15 60);
-	--gold: oklch(0.8 0.15 75);
-	--yellow: oklch(0.9 0.15 90);
-	--lime: oklch(0.8 0.2 130);
-	--green: oklch(0.7 0.2 150);
-	--teal: oklch(0.7 0.15 170);
-	--blue: oklch(0.6 0.15 250);
-	--indigo: oklch(0.6 0.2 270);
-	--purple: oklch(0.6 0.2 310);
-	--pink: oklch(0.8 0.1 350);
-
-	/* Channels: */
-	$channels: (
-		--gray   l min(c, 0.03) h,
-		--red    l clamp(0.05, c, 0.20) clamp(15, h, 35),
-		--coral  l clamp(0.05, c, 0.18) clamp(35, h, 50),
-		--orange l clamp(0.05, c, 0.13) clamp(50, h, 75),
-		--gold   l clamp(0.05, c, 0.10) clamp(75, h, 95),
-		--yellow l clamp(0.05, c, 0.11) clamp(95, h, 115),
-		--lime   l clamp(0.05, c, 0.15) clamp(115, h, 138),
-		--green  l clamp(0.05, c, 0.17) clamp(138, h, 165),
-		--teal   l clamp(0.05, c, 0.10) clamp(165, h, 210),
-		--blue   l clamp(0.05, c, 0.28) clamp(210, h, 265),
-		--indigo l clamp(0.10, c, 0.29) clamp(265, h, 295),
-		--purple l clamp(0.10, c, 0.28) clamp(295, h, 325),
-		--pink   l clamp(0.10, c, 0.23) clamp(325, h, 375)
+	$origin: (
+		--gray: oklch(0.6 0.02 250),
+		--red: oklch(0.6 0.2 30),
+		--coral: oklch(0.7 0.15 45),
+		--orange: oklch(0.8 0.15 60),
+		--gold: oklch(0.8 0.15 75),
+		--yellow: oklch(0.9 0.15 90),
+		--lime: oklch(0.8 0.2 130),
+		--green: oklch(0.7 0.2 150),
+		--teal: oklch(0.7 0.15 170),
+		--blue: oklch(0.6 0.15 250),
+		--indigo: oklch(0.6 0.2 270),
+		--purple: oklch(0.6 0.2 310),
+		--magenta: oklch(0.6 0.2 330)
 	);
 
 	/* Weight: */
-	@each $weight in 100 200 300 400 500 600 700 800 900 {
-		/* Calculate Percentage: */
-		$percentage: calc((900 - $weight) / (900 - 100));
+	@each $prop, $color in $origin {
+		@each $weight in 100 200 300 400 500 600 700 800 900 {
+			/* Calculate Percentage: */
+			$percentage: calc((900 - $weight) / (900 - 100));
 
-		@each $prop, $l, $c, $h in $channels {
 			/* Calculate Channels: */
-			$l: calc(0.2 + (0.95 - 0.2) * $percentage);
-			$c: calc($c * sin(pi * $l));
+			$l: calc(0.17 + (0.97 - 0.17) * $percentage);
+			$c: calc(c * sin(pi * $l));
+			$lch: $l $c h;
 
 			/* Declare Colors: */
-			#{$prop}-#{$weight}: oklch(from var(#{$prop}) #{$l} #{$c} #{$h});
+			#{$prop}-#{$weight}: oklch(from $color #{$lch});
 		}
+	}
+
+	/* Theme: */
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
+
+	--low-contrast-color: var(--gray-600);
+	--medium-contrast-color: var(--gray-800);
+	--high-contrast-color: var(--black);
+
+	@media (prefers-color-scheme: dark) {
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
+
+		--low-contrast-color: var(--gray-400);
+		--medium-contrast-color: var(--gray-200);
+		--high-contrast-color: var(--white);
 	}
 
 	/* --- Sizes --- */
