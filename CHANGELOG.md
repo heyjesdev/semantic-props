@@ -27,7 +27,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
 - Removed accent, brown, cyan and pink from color palette.
 - Removed unnecessary `letter-spacing` and `word-spacing` props.
-- Removed low/high `hue-rotate()` filter props.
+- Removed `--low-hue-rotate` and `--high-hue-rotate` filter props.
 - Removed unnecessary derivative safe-area props.
 - Removed unnecessary transform props.
 
