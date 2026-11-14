@@ -16,7 +16,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
 - Changed `-viewport` query props to `-breakpoint` suffix.
-- Changed color weights to start at 50 with `oklch` lightness at `0.97` and 950 at `0.17`.
+- Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
 - Changed weights used by `--low-contrast-color` and `--medium-contrast-color` by `100` in their respective mode.
 - Changed sizes to use asymmetric modular size-scale `--small-size-scale` and `--large-size-scale` props.
 - Changed `--margin-size` to use container-relative units (`5cqi`).
