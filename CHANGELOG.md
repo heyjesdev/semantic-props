@@ -19,7 +19,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 - Changed color weight 100 `oklch` lightness to `0.97` and 900 to `0.17`.
 - Changed weights used by `--low-contrast-color` and `--medium-contrast-color` by `100` in their respective mode.
 - Changed sizes to use asymmetric `--smaller` and `--larger` modifiers.
-- Changed `--margin-size` to use viewport-relative units (`5vw`).
+- Changed `--margin-size` to use container-relative units (`5cqi`).
 - Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
