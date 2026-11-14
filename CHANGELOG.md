@@ -9,7 +9,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 ### Added
 
 - Added gold, teal, and purple to color palette.
-- Added asymmetric modular font scale using `--smaller-font` and `--larger-font` modifiers.
+- Added asymmetric modular font-scale using `--small-font-scale` and `--large-font-scale` props.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
 ### Changed
@@ -18,7 +18,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 - Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed color weight 100 `oklch` lightness to `0.97` and 900 to `0.17`.
 - Changed weights used by `--low-contrast-color` and `--medium-contrast-color` by `100` in their respective mode.
-- Changed sizes to use asymmetric `--smaller` and `--larger` modifiers.
+- Changed sizes to use asymmetric modular size-scale `--small-size-scale` and `--large-size-scale` props.
 - Changed `--margin-size` to use container-relative units (`5cqi`).
 - Changed `--accent-family` name to `--brand-family`.
 
