@@ -50,9 +50,9 @@
 
 	/* Weight: */
 	@each $prop, $color in $origin {
-		@each $weight in 100 200 300 400 500 600 700 800 900 {
+		@each $weight in 50 100 200 300 400 500 600 700 800 900 950 {
 			/* Calculate Percentage: */
-			$percentage: calc((900 - $weight) / (900 - 100));
+			$percentage: calc((950 - $weight) / (950 - 50));
 
 			/* Calculate Channels: */
 			$l: calc(0.17 + (0.97 - 0.17) * $percentage);
@@ -66,8 +66,8 @@
 
 	/* Theme: */
 	--background-color: var(--white);
-	--middleground-color: var(--gray-200);
-	--foreground-color: var(--gray-100);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-50);
 
 	--low-contrast-color: var(--gray-600);
 	--medium-contrast-color: var(--gray-800);
@@ -75,8 +75,8 @@
 
 	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
-		--middleground-color: var(--gray-800);
-		--foreground-color: var(--gray-900);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-950);
 
 		--low-contrast-color: var(--gray-400);
 		--medium-contrast-color: var(--gray-200);
