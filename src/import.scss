@@ -157,10 +157,20 @@
 	--bold-weight: 700;
 	--heavy-weight: 900;
 
+	/* Letter Spacing: */
+	--tight-letter: -0.05em;
+	--normal-letter: normal;
+	--wide-letter: 0.1em;
+
 	/* Line Height: */
 	--short-line: 1.2;
 	--normal-line: 1.6;
 	--tall-line: 2;
+
+	/* Word Spacing: */
+	--tight-word: -0.1em;
+	--normal-word: normal;
+	--wide-word: 0.2em;
 
 	/* --- Filters --- */
 
@@ -247,6 +257,12 @@
 	--ease-in: ease-in;
 	--ease-out: ease-out;
 	--ease-in-out: ease-in-out;
+
+	/* --- Transforms --- */
+
+	/* Scale: */
+	--small-scale: 0.95;
+	--large-scale: 1.05;
 
 	/* --- Positions --- */
 
