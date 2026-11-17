@@ -10,7 +10,7 @@ This **breaking change** release aims to better implementation, scope and config
 
 - Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
 - Added `gold`, `teal`, `violet` and `purple` to color palette.
-- Added asymmetric modular font-scale using `--small|large-font-scale` props.
+- Added asymmetric modular-scale for fonts using `--small|large-font-ratio` props.
 - Added `--hue-rotate` filter prop.
 
 ### Changed
@@ -19,9 +19,10 @@ This **breaking change** release aims to better implementation, scope and config
 - Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
 - Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
 - Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
-- Changed sizes to use asymmetric modular size-scale `--small|large-size-scale` props.
+- Changed sizes to use asymmetric modular-scale `--small|large-ratio` props.
 - Changed `--margin-size` to use container-relative units (`5cqi`) versus percentage (`5%`).
-- Changed `--accent-family` name to `--brand-family`.
+- Changed `--accent-family` prop name to `--brand-family`.
+- Changed `--small|large-scale` prop names to `--scale-in|out`.
 
 ### Removed
 

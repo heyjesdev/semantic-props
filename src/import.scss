@@ -106,27 +106,27 @@
 	/* --- Sizes --- */
 
 	/* General: */
-	--small-size-scale: 0.75;
-	--large-size-scale: 1.25;
+	--small-ratio: 0.75;
+	--large-ratio: 1.25;
 
-	--3x-small: calc(var(--2x-small) * var(--small-size-scale));
-	--2x-small: calc(var(--x-small) * var(--small-size-scale));
-	--x-small: calc(var(--small) * var(--small-size-scale));
-	--small: calc(var(--medium) * var(--small-size-scale));
+	--3x-small: calc(var(--2x-small) * var(--small-ratio));
+	--2x-small: calc(var(--x-small) * var(--small-ratio));
+	--x-small: calc(var(--small) * var(--small-ratio));
+	--small: calc(var(--medium) * var(--small-ratio));
 	--medium: 1rem;
-	--large: calc(var(--medium) * var(--large-size-scale));
-	--x-large: calc(var(--large) * var(--large-size-scale));
-	--2x-large: calc(var(--x-large) * var(--large-size-scale));
-	--3x-large: calc(var(--2x-large) * var(--large-size-scale));
-	--4x-large: calc(var(--3x-large) * var(--large-size-scale));
-	--5x-large: calc(var(--4x-large) * var(--large-size-scale));
-	--6x-large: calc(var(--5x-large) * var(--large-size-scale));
-	--7x-large: calc(var(--6x-large) * var(--large-size-scale));
-	--8x-large: calc(var(--7x-large) * var(--large-size-scale));
-	--9x-large: calc(var(--8x-large) * var(--large-size-scale));
+	--large: calc(var(--medium) * var(--large-ratio));
+	--x-large: calc(var(--large) * var(--large-ratio));
+	--2x-large: calc(var(--x-large) * var(--large-ratio));
+	--3x-large: calc(var(--2x-large) * var(--large-ratio));
+	--4x-large: calc(var(--3x-large) * var(--large-ratio));
+	--5x-large: calc(var(--4x-large) * var(--large-ratio));
+	--6x-large: calc(var(--5x-large) * var(--large-ratio));
+	--7x-large: calc(var(--6x-large) * var(--large-ratio));
+	--8x-large: calc(var(--7x-large) * var(--large-ratio));
+	--9x-large: calc(var(--8x-large) * var(--large-ratio));
 
-	--smaller: calc(1em * var(--small-size-scale));
-	--larger: calc(1em * var(--large-size-scale));
+	--smaller: calc(1em * var(--small-ratio));
+	--larger: calc(1em * var(--large-ratio));
 
 	/* Container: */
 	--3x-small-container: 8rem; /* 128px */
@@ -150,25 +150,25 @@
 	/* --- Typography --- */
 
 	/* Font Size: */
-	--small-font-scale: 0.875;
-	--large-font-scale: 1.2;
+	--small-font-ratio: 0.875;
+	--large-font-ratio: 1.2;
 
-	--x-small-font: calc(var(--small-font) * var(--small-font-scale));
-	--small-font: calc(var(--medium-font) * var(--small-font-scale));
+	--x-small-font: calc(var(--small-font) * var(--small-font-ratio));
+	--small-font: calc(var(--medium-font) * var(--small-font-ratio));
 	--medium-font: 1rem;
-	--large-font: calc(var(--medium-font) * var(--large-font-scale));
-	--x-large-font: calc(var(--large-font) * var(--large-font-scale));
-	--2x-large-font: calc(var(--x-large-font) * var(--large-font-scale));
-	--3x-large-font: calc(var(--2x-large-font) * var(--large-font-scale));
-	--4x-large-font: calc(var(--3x-large-font) * var(--large-font-scale));
-	--5x-large-font: calc(var(--4x-large-font) * var(--large-font-scale));
-	--6x-large-font: calc(var(--5x-large-font) * var(--large-font-scale));
-	--7x-large-font: calc(var(--6x-large-font) * var(--large-font-scale));
-	--8x-large-font: calc(var(--7x-large-font) * var(--large-font-scale));
-	--9x-large-font: calc(var(--8x-large-font) * var(--large-font-scale));
+	--large-font: calc(var(--medium-font) * var(--large-font-ratio));
+	--x-large-font: calc(var(--large-font) * var(--large-font-ratio));
+	--2x-large-font: calc(var(--x-large-font) * var(--large-font-ratio));
+	--3x-large-font: calc(var(--2x-large-font) * var(--large-font-ratio));
+	--4x-large-font: calc(var(--3x-large-font) * var(--large-font-ratio));
+	--5x-large-font: calc(var(--4x-large-font) * var(--large-font-ratio));
+	--6x-large-font: calc(var(--5x-large-font) * var(--large-font-ratio));
+	--7x-large-font: calc(var(--6x-large-font) * var(--large-font-ratio));
+	--8x-large-font: calc(var(--7x-large-font) * var(--large-font-ratio));
+	--9x-large-font: calc(var(--8x-large-font) * var(--large-font-ratio));
 
-	--smaller-font: calc(1em * var(--small-font-scale));
-	--larger-font: calc(1em * var(--large-font-scale));
+	--smaller-font: calc(1em * var(--small-font-ratio));
+	--larger-font: calc(1em * var(--large-font-ratio));
 
 	/* Font Family: */
 	--body-family: system-ui, sans-serif;
@@ -294,8 +294,8 @@
 	/* --- Transforms --- */
 
 	/* Scale: */
-	--small-scale: 0.95;
-	--large-scale: 1.05;
+	--scale-out: 0.95;
+	--scale-in: 1.05;
 
 	/* --- Positions --- */
 
