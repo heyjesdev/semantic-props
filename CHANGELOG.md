@@ -15,7 +15,7 @@ This **breaking change** release aims to better implementation, scope and config
 
 ### Changed
 
-- Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped instances.
+- Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
 - Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
 - Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
 - Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
