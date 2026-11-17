@@ -8,7 +8,6 @@ This **breaking change** release aims to better implementation, scope and config
 
 ### Added
 
-- Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
 - Added `gold`, `teal`, `violet` and `purple` to color palette.
 - Added asymmetric modular-scale for fonts using `--small|large-font-ratio` props.
 - Added `--hue-rotate` filter prop.
@@ -16,6 +15,7 @@ This **breaking change** release aims to better implementation, scope and config
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped, versioned instances.
+- Changed `-viewport` query props to `-breakpoint` favoring `@container` with fallback to `@media`.
 - Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
 - Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
 - Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
