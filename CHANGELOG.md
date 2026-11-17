@@ -10,6 +10,7 @@ This **breaking change** release aims to better implementation, scope and config
 
 - Added `gold`, `teal`, `violet` and `purple` to color palette.
 - Added `--theme:light|dark` queries for applicable color props.
+- Added `--margin-top|right|bottom|left` for safe document margins.
 - Added asymmetric modular-scale for fonts using `--small|large-font-ratio` props.
 - Added `--hue-rotate` filter prop.
 
@@ -21,7 +22,6 @@ This **breaking change** release aims to better implementation, scope and config
 - Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
 - Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
 - Changed sizes to use asymmetric modular-scale `--small|large-ratio` props.
-- Changed `--margin-size` to use container-relative units (`5cqi`) versus percentage (`5%`).
 - Changed `--accent-family` prop name to `--brand-family`.
 - Changed `--small|large-scale` prop names to `--scale-in|out`.
 
@@ -29,7 +29,9 @@ This **breaking change** release aims to better implementation, scope and config
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
 - Removed `accent` and `brown` from color palette.
+- Removed `--margin-size` prop.
 - Removed `--low|high-hue-rotate` filter props.
+- Removed safe-area props.
 
 ## [2.1.1] - 2026-08-12
 
