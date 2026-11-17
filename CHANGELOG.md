@@ -11,7 +11,7 @@ This **breaking change** release aims to better implementation, scope and config
 - Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
 - Added `gold`, `teal`, `violet` and `purple` to color palette.
 - Added asymmetric modular font-scale using `--small|large-font-scale` props.
-- Added `--positive|negative-hue-rotate` filter props.
+- Added `--hue-rotate` filter prop.
 
 ### Changed
 

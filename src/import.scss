@@ -236,8 +236,7 @@
 	--strong-grayscale: grayscale(1);
 
 	/* Hue Rotate: */
-	--positive-hue-rotate: hue-rotate(30deg);
-	--negative-hue-rotate: hue-rotate(-30deg);
+	--hue-rotate: hue-rotate(30deg);
 
 	/* Invert: */
 	--weak-invert: invert(0.6);
