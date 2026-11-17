@@ -1,5 +1,23 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
+@mixin light {
+	@media (prefers-color-scheme: light) {
+		@content;
+	}
+	@container style(--theme: light) {
+		@content;
+	}
+}
+
+@mixin dark {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+	@container style(--theme: dark) {
+		@content;
+	}
+}
+
 :where(semantic-props[version="3"]) {
 	display: contents;
 
@@ -87,15 +105,17 @@
 	}
 
 	/* Theme: */
-	--background-color: var(--white);
-	--middleground-color: var(--gray-100);
-	--foreground-color: var(--gray-50);
+	@include light {
+		--background-color: var(--white);
+		--middleground-color: var(--gray-100);
+		--foreground-color: var(--gray-50);
 
-	--low-contrast-color: var(--gray-600);
-	--medium-contrast-color: var(--gray-800);
-	--high-contrast-color: var(--black);
+		--low-contrast-color: var(--gray-600);
+		--medium-contrast-color: var(--gray-800);
+		--high-contrast-color: var(--black);
+	}
 
-	@media (prefers-color-scheme: dark) {
+	@include dark {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
 		--foreground-color: var(--gray-950);
