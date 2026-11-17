@@ -20,7 +20,7 @@ This **breaking change** release aims to better implementation, scope and config
 - Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
 - Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
 - Changed sizes to use asymmetric modular size-scale `--small|large-size-scale` props.
-- Changed `--margin-size` to use container-relative units (`5cqi`).
+- Changed `--margin-size` to use container-relative units (`5cqi`) versus percentage (`5%`).
 - Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
