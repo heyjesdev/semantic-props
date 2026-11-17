@@ -51,6 +51,7 @@
 	/* Origin: */
 	$origin: (
 		--gray: oklch(0.6 0.02 250),
+		--pink: oklch(0.8 0.15 15),
 		--red: oklch(0.6 0.2 30),
 		--coral: oklch(0.7 0.15 45),
 		--orange: oklch(0.8 0.15 60),
@@ -59,8 +60,10 @@
 		--lime: oklch(0.8 0.2 130),
 		--green: oklch(0.7 0.2 150),
 		--teal: oklch(0.7 0.15 170),
+		--cyan: oklch(0.8 0.15 210),
 		--blue: oklch(0.6 0.15 250),
 		--indigo: oklch(0.6 0.2 270),
+		--violet: oklch(0.6 0.2 290),
 		--purple: oklch(0.6 0.2 310),
 		--magenta: oklch(0.6 0.2 330)
 	);

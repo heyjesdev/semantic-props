@@ -9,7 +9,7 @@ This **breaking change** release aims to better implementation, scope and config
 ### Added
 
 - Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
-- Added gold, teal, and purple to color palette.
+- Added gold, teal, violet and purple to color palette.
 - Added asymmetric modular font-scale using `--small-font-scale` and `--large-font-scale` props.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
 
@@ -25,7 +25,7 @@ This **breaking change** release aims to better implementation, scope and config
 ### Removed
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
-- Removed accent, brown, cyan and pink from color palette.
+- Removed accent and brown from color palette.
 - Removed `--low-hue-rotate` and `--high-hue-rotate` filter props.
 
 ## [2.1.1] - 2026-08-12
