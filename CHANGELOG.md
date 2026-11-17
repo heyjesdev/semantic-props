@@ -4,7 +4,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-This **breaking change** release aims to simplify scope, configuration and implementation.
+This **breaking change** release aims to better implementation, scope and configuration while preserving existing functionality.
 
 ### Added
 
