@@ -9,24 +9,25 @@ This **breaking change** release aims to better implementation, scope and config
 ### Added
 
 - Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
-- Added gold, teal, violet and purple to color palette.
-- Added asymmetric modular font-scale using `--small-font-scale` and `--large-font-scale` props.
-- Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
+- Added `gold`, `teal`, `violet` and `purple` to color palette.
+- Added asymmetric modular font-scale using `--small|large-font-scale` props.
+- Added `--positive|negative-hue-rotate` filter props.
 
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped instances.
 - Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
-- Changed weights used by `--low-contrast-color` and `--medium-contrast-color` by `100` in their respective mode.
-- Changed sizes to use asymmetric modular size-scale `--small-size-scale` and `--large-size-scale` props.
+- Changed weights used by `--background|middleground|foreground-color` to match their logical stacking inference.
+- Changed weights used by `--low|medium-contrast-color` by `100` in their respective mode.
+- Changed sizes to use asymmetric modular size-scale `--small|large-size-scale` props.
 - Changed `--margin-size` to use container-relative units (`5cqi`).
 - Changed `--accent-family` name to `--brand-family`.
 
 ### Removed
 
 - Removed registered custom properties (`@property`), relying on native custom-property inheritance and the `<semantic-props>` scope.
-- Removed accent and brown from color palette.
-- Removed `--low-hue-rotate` and `--high-hue-rotate` filter props.
+- Removed `accent` and `brown` from color palette.
+- Removed `--low|high-hue-rotate` filter props.
 
 ## [2.1.1] - 2026-08-12
 
