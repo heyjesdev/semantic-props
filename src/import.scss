@@ -172,6 +172,10 @@
 	--margin-bottom: clamp(env(safe-area-inset-bottom), 5cqi, var(--9x-large));
 	--margin-left: clamp(env(safe-area-inset-left), 5cqi, var(--9x-large));
 
+	--margin-header: var(--margin-top) var(--margin-right) 0 var(--margin-left);
+	--margin-body: 0 var(--margin-right) 0 var(--margin-left);
+	--margin-footer: 0 var(--margin-right) var(--margin-bottom) var(--margin-left);
+
 	/* --- Typography --- */
 
 	/* Font Size: */

@@ -10,7 +10,7 @@ This **breaking change** release aims to better implementation, scope and config
 
 - Added `gold`, `teal`, `violet` and `purple` to color palette.
 - Added `--theme:light|dark` queries for applicable color props.
-- Added `--margin-top|right|bottom|left` for safe document margins.
+- Added `--margin-top|right|bottom|left|header|body|footer` for safe document margins.
 - Added asymmetric modular-scale for fonts using `--small|large-font-ratio` props.
 - Added `--hue-rotate` filter prop.
 
