@@ -8,6 +8,7 @@ This **breaking change** release aims to simplify scope, configuration and imple
 
 ### Added
 
+- Added `-breakpoint` query props via `@container` to complement `-viewport` via `@media`.
 - Added gold, teal, and purple to color palette.
 - Added asymmetric modular font-scale using `--small-font-scale` and `--large-font-scale` props.
 - Added `--positive-hue-rotate` and `--negative-hue-rotate` filter props.
@@ -15,7 +16,6 @@ This **breaking change** release aims to simplify scope, configuration and imple
 ### Changed
 
 - Changed selector from `:root` to the `<semantic-props>` custom element, enabling scoped instances.
-- Changed `-viewport` query props to `-breakpoint` suffix.
 - Changed color weights to start at `50` with `oklch` lightness at `0.97` and `950` at `0.17`.
 - Changed weights used by `--low-contrast-color` and `--medium-contrast-color` by `100` in their respective mode.
 - Changed sizes to use asymmetric modular size-scale `--small-size-scale` and `--large-size-scale` props.
