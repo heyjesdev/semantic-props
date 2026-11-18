@@ -1,5 +1,7 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
+@use "sass:color";
+
 @mixin light {
 	@media (prefers-color-scheme: light) {
 		@content;
@@ -95,12 +97,13 @@
 			$percentage: calc((950 - $weight) / (950 - 50));
 
 			/* Calculate Channels: */
-			$l: calc(0.17 + (0.97 - 0.17) * $percentage);
-			$c: calc(c * sin(pi * $l));
-			$lch: $l $c h;
+			$l: round(0.17 + (0.97 - 0.17) * $percentage, 0.01);
+			$c: calc(c * round(sin(pi * $l), 0.01));
+			$h: calc(color.channel($color, "hue", $space: oklch) / 1deg);
+			$lch: $l $c $h;
 
 			/* Declare Colors: */
-			#{$prop}-#{$weight}: oklch(from $color #{$lch});
+			#{$prop}-#{$weight}: oklch($lch);
 		}
 	}
 
