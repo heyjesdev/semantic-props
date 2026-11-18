@@ -96,14 +96,18 @@
 			/* Calculate Percentage: */
 			$percentage: calc((950 - $weight) / (950 - 50));
 
-			/* Calculate Channels: */
+			/* Calculate Lightness: */
 			$l: round(0.17 + (0.97 - 0.17) * $percentage, 0.01);
-			$c: calc(c * round(sin(pi * $l), 0.01));
-			$h: calc(color.channel($color, "hue", $space: oklch) / 1deg);
-			$lch: $l $c $h;
+
+			/* Calculate Chroma: */
+			$c: color.channel($color, "chroma", $space: oklch);
+			$c: round($c * sin(pi * $l), 0.01);
+
+			/* Calculate Hue: */
+			$h: color.channel($color, "hue", $space: oklch);
 
 			/* Declare Colors: */
-			#{$prop}-#{$weight}: oklch($lch);
+			#{$prop}-#{$weight}: oklch($l $c $h);
 		}
 	}
 
