@@ -13,5 +13,8 @@
 	},
 	"peerDependencies": {
 		"typescript": "^5"
+	},
+	"dependencies": {
+		"semantic-props": "heyjesdev/semantic-props#v3.0.0"
 	}
 }
