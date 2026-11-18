@@ -31,6 +31,7 @@
 		"@fontsource/ibm-plex-mono": "^5.2.7",
 		"highlight.js": "^11.11.1",
 		"sanitize.css": "^13.0.0",
-		"semantic-props": "^2.1.1"
+		"semantic-props": "github:heyjesdev/semantic-props#v3.0.0",
+		"semantic-props-v2": "npm:semantic-props@^2.1.1"
 	}
 }

@@ -7,7 +7,9 @@
 	} = $props();
 </script>
 
-<code>{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
+<semantic-props version="3">
+	<code>{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
+</semantic-props>
 
 <style>
 	code {
@@ -22,27 +24,27 @@
 		*/
 
 		.hljs {
-			color: #383a42;
+			color: var(--gray-800);
 			@container style(--theme: dark) {
-				color: #abb2bf;
+				color: var(--gray-300);
 			}
 		}
 
 		.hljs-comment,
 		.hljs-quote {
-			color: #a0a1a7;
+			color: var(--gray-600);
 			font-style: italic;
 			@container style(--theme: dark) {
-				color: #5c6370;
+				color: var(--gray-600);
 			}
 		}
 
 		.hljs-doctag,
 		.hljs-keyword,
 		.hljs-formula {
-			color: #a626a4;
+			color: var(--purple-700);
 			@container style(--theme: dark) {
-				color: #c678dd;
+				color: var(--purple-400);
 			}
 		}
 
@@ -51,16 +53,16 @@
 		.hljs-selector-tag,
 		.hljs-deletion,
 		.hljs-subst {
-			color: #e45649;
+			color: var(--red-600);
 			@container style(--theme: dark) {
-				color: #e06c75;
+				color: var(--red-400);
 			}
 		}
 
 		.hljs-literal {
-			color: #0184bb;
+			color: var(--cyan-800);
 			@container style(--theme: dark) {
-				color: #56b6c2;
+				color: var(--cyan-400);
 			}
 		}
 
@@ -69,17 +71,17 @@
 		.hljs-addition,
 		.hljs-attribute,
 		.hljs-meta-string {
-			color: #50a14f;
+			color: var(--green-700);
 			@container style(--theme: dark) {
-				color: #98c379;
+				color: var(--green-400);
 			}
 		}
 
 		.hljs-built_in,
 		.hljs-class .hljs-title {
-			color: #c18401;
+			color: var(--yellow-800);
 			@container style(--theme: dark) {
-				color: #e6c07b;
+				color: var(--yellow-400);
 			}
 		}
 
@@ -91,9 +93,9 @@
 		.hljs-selector-attr,
 		.hljs-selector-pseudo,
 		.hljs-number {
-			color: #986801;
+			color: var(--orange-800);
 			@container style(--theme: dark) {
-				color: #d19a66;
+				color: var(--orange-400);
 			}
 		}
 
@@ -103,9 +105,9 @@
 		.hljs-meta,
 		.hljs-selector-id,
 		.hljs-title {
-			color: #4078f2;
+			color: var(--blue-600);
 			@container style(--theme: dark) {
-				color: #61aeee;
+				color: var(--blue-400);
 			}
 		}
 
