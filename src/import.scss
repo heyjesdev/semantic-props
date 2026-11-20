@@ -2,21 +2,18 @@
 
 @use "sass:color";
 
-@mixin light {
+@mixin light-dark($prop, $light, $dark) {
 	@media (prefers-color-scheme: light) {
-		@content;
+		#{$prop}: $light;
+	}
+	@media (prefers-color-scheme: dark) {
+		#{$prop}: $dark;
 	}
 	@container style(--theme: light) {
-		@content;
-	}
-}
-
-@mixin dark {
-	@media (prefers-color-scheme: dark) {
-		@content;
+		#{$prop}: $light;
 	}
 	@container style(--theme: dark) {
-		@content;
+		#{$prop}: $dark;
 	}
 }
 
@@ -111,26 +108,14 @@
 		}
 	}
 
-	/* Theme: */
-	@include light {
-		--background-color: var(--white);
-		--middleground-color: var(--gray-100);
-		--foreground-color: var(--gray-50);
+	/* Light-Dark: */
+	@include light-dark(--background-color, var(--white), var(--black));
+	@include light-dark(--middleground-color, var(--gray-100), var(--gray-900));
+	@include light-dark(--foreground-color, var(--gray-50), var(--gray-950));
 
-		--low-contrast-color: var(--gray-600);
-		--medium-contrast-color: var(--gray-800);
-		--high-contrast-color: var(--black);
-	}
-
-	@include dark {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-900);
-		--foreground-color: var(--gray-950);
-
-		--low-contrast-color: var(--gray-400);
-		--medium-contrast-color: var(--gray-200);
-		--high-contrast-color: var(--white);
-	}
+	@include light-dark(--low-contrast-color, var(--gray-600), var(--gray-400));
+	@include light-dark(--medium-contrast-color, var(--gray-800), var(--gray-200));
+	@include light-dark(--high-contrast-color, var(--black), var(--white));
 
 	/* --- Sizes --- */
 
